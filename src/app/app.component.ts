@@ -8,3 +8,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'ng-portfolio';
 }
+
+let name = document.getElementById('myName');
+
+window.addEventListener('scroll', function () {
+  console.log(123);
+  let value = window.scrollY;
+  if(name) (name.style.marginTop = value + 4 + 'px')
+})
+
+

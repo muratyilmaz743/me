@@ -1,3 +1,70 @@
+body
+  min-height: 100vh
+  background-color: #680000
+
+nav
+  position: absolute
+  z-index: 99999
+nav ul li
+  border-radius: 10px
+
+nav ul li a
+  margin-left: 2vh
+  color: white
+  border-radius: 15px
+
+nav ul li a:hover, nav ul li a.active
+  background-color: white
+  color: #244534
+
+section
+  position: relative
+  width: 100%
+  height: 100vh
+  padding: 0
+  display: flex
+  justify-content: center
+  align-items: center
+
+section::before
+  content: ""
+  position: absolute
+  bottom: 0
+  width: 100%
+  height: 20%
+  background: linear-gradient(to top,#680000, transparent )
+  z-index: 1000
+
+section img
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100vh
+  object-fit: cover
+
+section img#marsBack
+  z-index: 8
+
+section img#marsFront
+  z-index: 10
+#myName
+  color: #a32d43
+  position: absolute
+  white-space: nowrap
+  font-size: 6vw
+  z-index: 9
+  font-weight: bolder
+  letter-spacing: 7px
+
+
+#aboutTitle, #aboutMe
+  color: white
+#aboutTitle
+  padding: 1vw
+
+
+// Main page bouncing arrow
 .bounce
   -moz-animation: bounce 4s infinite
   -webkit-animation: bounce 4s infinite
