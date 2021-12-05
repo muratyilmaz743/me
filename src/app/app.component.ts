@@ -1,4 +1,5 @@
 import {AfterViewInit, Component} from '@angular/core';
+
 declare var $: any;
 
 @Component({
@@ -6,21 +7,27 @@ declare var $: any;
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.sass']
 })
-export class AppComponent implements AfterViewInit{
+export class AppComponent implements AfterViewInit {
 
   title = 'ng-portfolio';
 
   ngAfterViewInit(): void {
     let myName = document.getElementById('myName');
     let arrow = document.getElementById('bounce');
-    window.addEventListener('scroll', function () {
-      let value = window.scrollY;
-      if(myName) (myName.style.marginTop = value + 4 + 'px')
-      /*TODO ARKAPLAN SAĞA SOLA KAYABİLİR*/
+    window.addEventListener('wheel', function (e) {
+      var opacityOfText = $(myName).css("opacity");
+      var sizeOfText = parseInt($(myName).css("font-size"),10) + e.deltaY/12.6;
+
+      if (sizeOfText < 90)(sizeOfText = 90)
+      console.log(parseInt($(myName).css("font-size"),10))
+      console.log(e.deltaY)
+      console.log(sizeOfText)
+      $(myName).css("opacity", opacityOfText - e.deltaY/1260).css("font-size", sizeOfText + "px")
+
     });
 
-    $(window).scroll(function() {
-      $(arrow).css("opacity",$(document).height() - $(window).scrollTop() - $(window).height() - 50);
+    $(window).scroll(function () {
+      $(arrow).css("opacity", $(document).height() - $(window).scrollTop() - $(window).height() - 50);
     });
   }
 }
