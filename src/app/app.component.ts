@@ -17,11 +17,24 @@ export class AppComponent implements AfterViewInit {
     let button = document.getElementById('button1');
 
     window.addEventListener('wheel', function (e) {
-      var opacityOfText = $(myName).css("opacity");
-      var sizeOfText = parseInt($(myName).css("font-size"), 10) + e.deltaY / 12.6;
+      var wheelDir = wheelCalculator(e.deltaY);
+      var opacityVal = $(myName).css("opacity") - wheelDir;
+
+      var sizeOfText = parseInt($(myName).css("font-size")) + wheelDir * 100;
+
       if (sizeOfText < 94) (sizeOfText = 94)
-      $(myName).css("opacity", opacityOfText - e.deltaY / 1260).css("font-size", sizeOfText + "px")
+
+      $(myName).css("opacity", opacityVal ).css("font-size", sizeOfText + "px")
+      $(button).css("opacity", 0.8 - opacityVal);
+
+      /*TODO sorulacak düzgün çalışmıyor*/
     });
+
+    function wheelCalculator(wheelDelta: number) {
+      if (wheelDelta > 0) return 0.1;
+      else if (wheelDelta < 0) return -0.1;
+      else return 0;
+    }
 
     $(window).scroll(function () {
       $(arrow).css("opacity", $(document).height() - $(window).scrollTop() - $(window).height() - 50);
@@ -29,7 +42,7 @@ export class AppComponent implements AfterViewInit {
 
     // @ts-ignore
     button.addEventListener("click", function () {
-
+      alert("murat hello")
     })
   }
 }
