@@ -14,7 +14,7 @@ export class AppComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     let myName = document.getElementById('myName');
     let arrow = document.getElementById('bounce');
-    let button = document.getElementById('button1');
+    let button = document.getElementById('buttons');
 
     window.addEventListener('wheel', function (e) {
       var wheelDir = wheelCalculator(e.deltaY);
@@ -26,8 +26,6 @@ export class AppComponent implements AfterViewInit {
 
       $(myName).css("opacity", opacityVal ).css("font-size", sizeOfText + "px")
       $(button).css("opacity", 0.8 - opacityVal);
-
-      /*TODO sorulacak düzgün çalışmıyor*/
     });
 
     function wheelCalculator(wheelDelta: number) {
