@@ -24,8 +24,16 @@ export class AppComponent implements AfterViewInit {
 
       if (sizeOfText < 94) (sizeOfText = 94)
 
-      $(myName).css("opacity", opacityVal ).css("font-size", sizeOfText + "px")
-      $(button).css("opacity", 0.8 - opacityVal);
+      $(myName).css("opacity", opacityVal).css("font-size", sizeOfText + "px")
+      $(button).css("opacity", 1 - opacityVal);
+
+      if ($(button).css("opacity") > 0) {
+        $(button).css("pointer-events", "auto")
+      }else{
+        $(button).css("pointer-events","none")
+      }
+      console.log($(button).css("opacity"))
+
     });
 
     function wheelCalculator(wheelDelta: number) {
