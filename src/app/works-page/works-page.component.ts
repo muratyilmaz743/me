@@ -16,10 +16,10 @@ export class WorksPageComponent implements OnInit {
       let secondRow = document.getElementById('secondRow');
       if (e.deltaY < 0){
         // @ts-ignore
-        firstRow.scrollIntoView();
+        firstRow.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
       }else {
         // @ts-ignore
-        secondRow.scrollIntoView();
+        secondRow.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
       }
 
     })
