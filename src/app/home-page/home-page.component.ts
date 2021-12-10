@@ -37,8 +37,8 @@ export class HomePageComponent implements OnInit {
     });
 
     function wheelCalculator(wheelDelta: number) {
-      if (wheelDelta > 0) return 0.1;
-      else if (wheelDelta < 0) return -0.1;
+      if (wheelDelta > 0) return 0.3;
+      else if (wheelDelta < 0) return -0.3;
       else return 0;
     }
 
