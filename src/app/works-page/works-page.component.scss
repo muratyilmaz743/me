@@ -1,0 +1,38 @@
+.row {
+  margin: 0;
+}
+#logo {
+  margin: 0 1vh 0 1vh;
+}
+.navbar {
+  display: flex;
+  justify-content: center;
+}
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 15px;
+  background: #fff;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.col-sm {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
