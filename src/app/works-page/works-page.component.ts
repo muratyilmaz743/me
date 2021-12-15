@@ -1,11 +1,4 @@
-import {Component, NgModule, OnInit} from '@angular/core';
-import { SwiperModule } from 'swiper/angular';
-
-@NgModule({
-  imports: [SwiperModule],
-})
-
-export class YourAppModule {}
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-works-page',
