@@ -1,5 +1,4 @@
 import {Component, ViewEncapsulation, OnInit} from '@angular/core';
-import {SwiperComponent} from "swiper/angular";
 
 @Component({
   selector: 'app-works-page',
@@ -12,31 +11,18 @@ import {SwiperComponent} from "swiper/angular";
     }"
       class="mySwiper"
     >
-      <ng-template swiperSlide>Slide 1
+      <ng-template swiperSlide>
+        Arçelik B2C Hybris Project
       </ng-template
       >
-      <ng-template swiperSlide>Slide 2
+      <ng-template swiperSlide>
+        Çarşıbaşı Kozmetik ve Tekstil | SAP Hybris B2C Project
       </ng-template
       >
-      <ng-template swiperSlide>Slide 3
+      <ng-template swiperSlide>
+        Penti E-Commerce Cloud B2C Projesi
       </ng-template
       >
-      <ng-template swiperSlide>Slide 4
-      </ng-template
-      >
-      <ng-template swiperSlide>Slide 5
-      </ng-template
-      >
-      <ng-template swiperSlide>Slide 6
-      </ng-template
-      >
-      <ng-template swiperSlide>Slide 7
-      </ng-template
-      >
-      <ng-template swiperSlide>Slide 8
-      </ng-template
-      >
-      <ng-template swiperSlide>Slide 9</ng-template>
     </swiper>`,
   styleUrls: ['./works-page.component.scss'],
   encapsulation: ViewEncapsulation.None,
