@@ -14,13 +14,16 @@ SwiperCore.use([Pagination, Navigation]);
       [navigation]="true"
       class="mySwiper">
       <ng-template swiperSlide>
+        <img src="/src/assets/arcelikBackground.png" alt="arcelik"/>
         Arçelik B2C Hybris Project
       </ng-template>
       <ng-template swiperSlide>
+        <img src="/src/assets/underWorkBackground.jpg" alt="onwork"/>
         Çarşıbaşı Kozmetik ve Tekstil | SAP Hybris B2C Project
         <span>OnWork</span>
       </ng-template>
       <ng-template swiperSlide>
+        <img src="/src/assets/underWorkBackground.jpg" alt="onwork"/>
         Penti E-Commerce Cloud B2C Projesi
         <span>OnWork</span>
       </ng-template>
