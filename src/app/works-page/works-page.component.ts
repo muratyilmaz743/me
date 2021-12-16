@@ -1,28 +1,29 @@
 import {Component, ViewEncapsulation, OnInit} from '@angular/core';
 
+// import Swiper core and required modules
+import SwiperCore, {Pagination, Navigation} from "swiper";
+
+// install Swiper modules
+SwiperCore.use([Pagination, Navigation]);
+
 @Component({
   selector: 'app-works-page',
   template: `
     <swiper
-      [slidesPerView]="3"
-      [spaceBetween]="30"
-      [pagination]="{
-      clickable: true
-    }"
-      class="mySwiper"
-    >
+      [pagination]="{type: 'progressbar'}"
+      [navigation]="true"
+      class="mySwiper">
       <ng-template swiperSlide>
         Arçelik B2C Hybris Project
-      </ng-template
-      >
+      </ng-template>
       <ng-template swiperSlide>
         Çarşıbaşı Kozmetik ve Tekstil | SAP Hybris B2C Project
-      </ng-template
-      >
+        <span>OnWork</span>
+      </ng-template>
       <ng-template swiperSlide>
         Penti E-Commerce Cloud B2C Projesi
-      </ng-template
-      >
+        <span>OnWork</span>
+      </ng-template>
     </swiper>`,
   styleUrls: ['./works-page.component.scss'],
   encapsulation: ViewEncapsulation.None,
