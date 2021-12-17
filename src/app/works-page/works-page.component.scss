@@ -35,12 +35,30 @@
   -webkit-filter: blur(8px);
 }
 
-.swiper-slide h1, i{
+.swiper-slide h2, i {
   z-index: 999;
   display: block;
+  font-weight: bold;
 }
 
-i{
+.swiper-slide h2 {
+  color: #ea001a;
+  border-style: solid;
+  border-color: #484554;
+  padding: 27px;
+  -webkit-transition: font-size .7s;
+  -moz-transition: font-size .7s;
+  -o-transition: font-size .7s;
+  transition: font-size .7s;
+}
+
+.swiper-slide h2:hover {
+  font-size: 2em;
+  cursor: context-menu;
+}
+
+.swiper-slide i {
+  color: #484554;
   font-size: large;
-  margin-top: 3vh;
+  margin-top: 4vh;
 }

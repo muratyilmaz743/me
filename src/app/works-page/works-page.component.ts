@@ -17,19 +17,19 @@ SwiperCore.use([Pagination, Navigation]);
       class="mySwiper">
       <ng-template swiperSlide>
         <img src="../../assets/arcelikBackground.png" alt="arcelik"/>
-        <h1>Arçelik B2C Hybris Project</h1>
+        <h2>Arçelik B2C Hybris Project</h2>
       </ng-template>
       <ng-template swiperSlide>
         <img src="../../assets/underWorkBackground.jpg" alt="onwork"/>
-        <h1>Çarşıbaşı Kozmetik ve Tekstil | SAP Hybris B2C Project
+        <h2>Çarşıbaşı Kozmetik ve Tekstil | SAP Hybris B2C Project
         <i>OnWork</i>
-        </h1>
+        </h2>
       </ng-template>
       <ng-template swiperSlide>
         <img src="../../assets/underWorkBackground.jpg" alt="onwork"/>
-        <h1>Penti E-Commerce Cloud B2C Projesi
+        <h2>Penti E-Commerce Cloud B2C Projesi
             <i>OnWork</i>
-        </h1>
+        </h2>
       </ng-template>
     </swiper>`,
   styleUrls: ['./works-page.component.scss'],
