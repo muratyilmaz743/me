@@ -34,3 +34,13 @@
   filter: blur(8px);
   -webkit-filter: blur(8px);
 }
+
+.swiper-slide h1, i{
+  z-index: 999;
+  display: block;
+}
+
+i{
+  font-size: large;
+  margin-top: 3vh;
+}

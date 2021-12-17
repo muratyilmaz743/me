@@ -12,20 +12,24 @@ SwiperCore.use([Pagination, Navigation]);
     <swiper
       [pagination]="{type: 'progressbar'}"
       [navigation]="true"
+      (swiper)="onSwiper($event)"
+      (slideChange)="onSlideChange()"
       class="mySwiper">
       <ng-template swiperSlide>
-        <img src="/src/assets/arcelikBackground.png" alt="arcelik"/>
-        Arçelik B2C Hybris Project
+        <img src="../../assets/arcelikBackground.png" alt="arcelik"/>
+        <h1>Arçelik B2C Hybris Project</h1>
       </ng-template>
       <ng-template swiperSlide>
-        <img src="/src/assets/underWorkBackground.jpg" alt="onwork"/>
-        Çarşıbaşı Kozmetik ve Tekstil | SAP Hybris B2C Project
-        <span>OnWork</span>
+        <img src="../../assets/underWorkBackground.jpg" alt="onwork"/>
+        <h1>Çarşıbaşı Kozmetik ve Tekstil | SAP Hybris B2C Project
+        <i>OnWork</i>
+        </h1>
       </ng-template>
       <ng-template swiperSlide>
-        <img src="/src/assets/underWorkBackground.jpg" alt="onwork"/>
-        Penti E-Commerce Cloud B2C Projesi
-        <span>OnWork</span>
+        <img src="../../assets/underWorkBackground.jpg" alt="onwork"/>
+        <h1>Penti E-Commerce Cloud B2C Projesi
+            <i>OnWork</i>
+        </h1>
       </ng-template>
     </swiper>`,
   styleUrls: ['./works-page.component.scss'],
@@ -41,4 +45,10 @@ export class WorksPageComponent implements OnInit {
 
   }
 
+  onSlideChange() {
+    console.log('slide change');
+  }
+
+  onSwiper(swiper: any) {
+  }
 }
