@@ -44,14 +44,13 @@
 .swiper-slide h2 {
   color: #ea001a;
   border-style: solid;
-  border-radius: 7px;
-  border-width: 0.08em;
+  border-width: 0.08em 0;
   border-color: #484554;
   padding: 27px;
-  -webkit-transition: font-size .7s;
-  -moz-transition: font-size .7s;
-  -o-transition: font-size .7s;
-  transition: font-size .7s;
+  -webkit-transition: .7s;
+  -moz-transition:  .7s;
+  -o-transition:  .7s;
+  transition: .7s ;
 }
 
 .swiper-slide h2:hover {

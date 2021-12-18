@@ -57,14 +57,17 @@ export class WorksPageComponent implements OnInit {
   }
 
   onClickArcelik() {
-    console.log(this.arcelikHeader)
+    // @ts-ignore
+    document.getElementById('arcelikHeader').style.marginTop = "-75vh";
   }
 
   onClickCarsi() {
-    console.log(this.carsiHeader)
+    // @ts-ignore
+    document.getElementById('carsiHeader').style.marginTop = "-75vh";
   }
 
   onClickPenti() {
-    console.log(this.pentiHeadeer)
+    // @ts-ignore
+    document.getElementById('pentiHeadeer').style.marginTop = "-75vh";
   }
 }
