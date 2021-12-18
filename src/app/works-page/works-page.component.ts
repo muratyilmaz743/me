@@ -27,7 +27,7 @@ SwiperCore.use([Pagination, Navigation]);
       </ng-template>
       <ng-template swiperSlide>
         <img src="../../assets/underWorkBackground.jpg" alt="onwork"/>
-        <h2 (click)="onClickPenti()" #pentiHeadeer id="pentiHeadeer">Penti E-Commerce Cloud B2C Projesi
+        <h2 (click)="onClickPenti()" #pentiHeadeer id="pentiHeader">Penti E-Commerce Cloud B2C Projesi
             <i>OnWork</i>
         </h2>
       </ng-template>
@@ -39,7 +39,7 @@ SwiperCore.use([Pagination, Navigation]);
 export class WorksPageComponent implements OnInit {
   @ViewChild('arcelikHeader') arcelikHeader: ElementRef | undefined
   @ViewChild('carsiHeader') carsiHeader: ElementRef | undefined
-  @ViewChild('pentiHeadeer') pentiHeadeer: ElementRef | undefined
+  @ViewChild('pentiHeader') pentiHeader: ElementRef | undefined
 
 
   constructor() {
@@ -68,6 +68,6 @@ export class WorksPageComponent implements OnInit {
 
   onClickPenti() {
     // @ts-ignore
-    document.getElementById('pentiHeadeer').style.marginTop = "-75vh";
+    document.getElementById('pentiHeader').style.marginTop = "-75vh";
   }
 }
