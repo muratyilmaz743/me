@@ -2,7 +2,7 @@ import {Component, ViewEncapsulation, OnInit, ElementRef, ViewChild} from '@angu
 
 // import Swiper core and required modules
 import SwiperCore, {Pagination, Navigation} from "swiper";
-
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 // install Swiper modules
 SwiperCore.use([Pagination, Navigation]);
 
@@ -17,7 +17,7 @@ SwiperCore.use([Pagination, Navigation]);
       class="mySwiper">
       <ng-template swiperSlide>
         <img src="../../assets/arcelikBackground.png" alt="arcelik"/>
-        <h2 (click)="onClickArcelik()" #arcelikHeader id="arcelikHeader" >Arçelik B2C Hybris Project</h2>
+         <h2 (click)="openScrollableContent(longContent)" #arcelikHeader id="arcelikHeader" >Arçelik B2C Hybris Project</h2>
       </ng-template>
       <ng-template swiperSlide>
         <img src="../../assets/underWorkBackground.jpg" alt="onwork"/>
@@ -31,7 +31,15 @@ SwiperCore.use([Pagination, Navigation]);
             <i>OnWork</i>
         </h2>
       </ng-template>
-    </swiper>`,
+    </swiper>
+    <ng-template #longContent let-modal>
+      <div class="modal-body">
+        <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+      </div>
+    </ng-template>`,
   styleUrls: ['./works-page.component.scss'],
   encapsulation: ViewEncapsulation.None,
 
@@ -42,7 +50,7 @@ export class WorksPageComponent implements OnInit {
   @ViewChild('pentiHeader') pentiHeader: ElementRef | undefined
 
 
-  constructor() {
+  constructor(private modalService: NgbModal) {
   }
 
   ngOnInit(): void {
@@ -69,5 +77,10 @@ export class WorksPageComponent implements OnInit {
   onClickPenti() {
     // @ts-ignore
     document.getElementById('pentiHeader').style.marginTop = "-75vh";
+  }
+
+  openScrollableContent(longContent: any) {
+    this.modalService.open(longContent, { scrollable: true });
+    this.onClickArcelik();
   }
 }
