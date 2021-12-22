@@ -1,5 +1,5 @@
 import {Component, ViewEncapsulation, OnInit, ElementRef, ViewChild} from '@angular/core';
-
+declare var $: any;
 // import Swiper core and required modules
 import SwiperCore, {Pagination, Navigation} from "swiper";
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
@@ -17,19 +17,19 @@ SwiperCore.use([Pagination, Navigation]);
       class="mySwiper">
       <ng-template swiperSlide>
         <img src="../../assets/arcelikBackground.png" alt="arcelik"/>
-        <h2 (click)="openScrollableContent(longContent)" #arcelikHeader id="arcelikHeader">Arçelik B2C Hybris
+        <h2 (click)="onClickHeader(this.arcelikHeader)" #arcelikHeader id="arcelikHeader">Arçelik B2C Hybris
           Project</h2>
       </ng-template>
       <ng-template swiperSlide>
         <img src="../../assets/underWorkBackground.jpg" alt="onwork"/>
-        <h2 (click)="onClickCarsi()" #carsiHeader id="carsiHeader">Çarşıbaşı Kozmetik ve Tekstil | SAP Hybris B2C
+        <h2 (click)="onClickHeader(this.carsiHeader)" #carsiHeader id="carsiHeader">Çarşıbaşı Kozmetik ve Tekstil | SAP Hybris B2C
           Project
           <i>OnWork</i>
         </h2>
       </ng-template>
       <ng-template swiperSlide>
         <img src="../../assets/underWorkBackground.jpg" alt="onwork"/>
-        <h2 (click)="onClickPenti()" #pentiHeadeer id="pentiHeader">Penti E-Commerce Cloud B2C Projesi
+        <h2 (click)="onClickHeader(this.pentiHeader)" #pentiHeadeer id="pentiHeader">Penti E-Commerce Cloud B2C Projesi
           <i>OnWork</i>
         </h2>
       </ng-template>
@@ -67,6 +67,7 @@ export class WorksPageComponent implements OnInit {
   onSwiper(swiper: any) {
   }
 
+  /*
   onClickArcelik() {
     const arcelik = document.getElementById('arcelikHeader');
     if (arcelik?.classList.contains('upped')) {
@@ -79,7 +80,6 @@ export class WorksPageComponent implements OnInit {
       arcelik?.style.marginTop = "-75vh";
     }
   }
-
   onClickCarsi() {
     // @ts-ignore
     document.getElementById('carsiHeader')?.style.marginTop = "-75vh";
@@ -88,10 +88,17 @@ export class WorksPageComponent implements OnInit {
   onClickPenti() {
     // @ts-ignore
     document.getElementById('pentiHeader').style.marginTop = "-75vh";
-  }
+  }*/
 
-  openScrollableContent(longContent: any) {
-    this.modalService.open(longContent, {scrollable: true});
-    this.onClickArcelik();
+  onClickHeader(elm: any){
+    if (elm?.classList.contains('upped')) {
+      // @ts-ignore
+      elm.style.marginTop = "0";
+      elm.classList.remove('upped')
+    } else {
+      elm?.classList.add('upped');
+      // @ts-ignore
+      elm?.style.marginTop = "-75vh";
+    }
   }
 }
