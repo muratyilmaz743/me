@@ -29,7 +29,7 @@ SwiperCore.use([Pagination, Navigation]);
       </ng-template>
       <ng-template swiperSlide>
         <img src="../../assets/underWorkBackground.jpg" alt="onwork"/>
-        <h2 (click)="onClickHeader(this.pentiHeader)" #pentiHeadeer id="pentiHeader">Penti E-Commerce Cloud B2C Projesi
+        <h2 (click)="onClickHeader(this.pentiHeader)" #pentiHeader id="pentiHeader">Penti E-Commerce Cloud B2C Projesi
           <i>OnWork</i>
         </h2>
       </ng-template>
