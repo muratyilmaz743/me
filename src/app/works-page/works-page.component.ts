@@ -67,29 +67,6 @@ export class WorksPageComponent implements OnInit {
   onSwiper(swiper: any) {
   }
 
-  /*
-  onClickArcelik() {
-    const arcelik = document.getElementById('arcelikHeader');
-    if (arcelik?.classList.contains('upped')) {
-      // @ts-ignore
-      arcelik.style.marginTop = "0";
-      arcelik.classList.remove('upped')
-    } else {
-      arcelik?.classList.add('upped');
-      // @ts-ignore
-      arcelik?.style.marginTop = "-75vh";
-    }
-  }
-  onClickCarsi() {
-    // @ts-ignore
-    document.getElementById('carsiHeader')?.style.marginTop = "-75vh";
-  }
-
-  onClickPenti() {
-    // @ts-ignore
-    document.getElementById('pentiHeader').style.marginTop = "-75vh";
-  }*/
-
   onClickHeader(elm: any){
     if (elm?.classList.contains('upped')) {
       // @ts-ignore
@@ -100,5 +77,9 @@ export class WorksPageComponent implements OnInit {
       // @ts-ignore
       elm?.style.marginTop = "-75vh";
     }
+  }
+
+  openScrollableContent(longContent: any) {
+    this.modalService.open(longContent, { scrollable: true });
   }
 }
