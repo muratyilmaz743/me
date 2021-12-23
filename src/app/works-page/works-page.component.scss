@@ -48,9 +48,9 @@
   border-color: #484554;
   padding: 27px;
   -webkit-transition: .7s;
-  -moz-transition:  .7s;
-  -o-transition:  .7s;
-  transition: .7s ;
+  -moz-transition: .7s;
+  -o-transition: .7s;
+  transition: .7s;
 }
 
 .swiper-slide h2:hover {
@@ -63,14 +63,26 @@
   font-size: large;
   margin-top: 4vh;
 }
+
 .dark-modal .modal-content {
   background-color: #292b2c;
   color: white;
 }
+
 .dark-modal .close {
   color: white;
 }
+
 .light-blue-backdrop {
   background-color: #5cb3fd;
+}
+
+.contents {
+  background-color: white;
+
+}
+
+.contents .contentDetail {
+  width: 80%;
 }
 

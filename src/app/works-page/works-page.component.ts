@@ -34,14 +34,13 @@ SwiperCore.use([Pagination, Navigation]);
         </h2>
       </ng-template>
     </swiper>
-    <ng-template #longContent let-modal>
-      <div class="modal-body">
-        <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget
-          quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
-      </div>
+    <ng-template #contents>
+        <div class="container">
+          <h2>Arçelik</h2>
+          <div class="contentDetail">
+            <p>Murat Yılmaz arçelik projesi</p>
+          </div>
+        </div>
     </ng-template>`,
   styleUrls: ['./works-page.component.scss'],
   encapsulation: ViewEncapsulation.None,
@@ -79,7 +78,7 @@ export class WorksPageComponent implements OnInit {
     }
   }
 
-  openScrollableContent(longContent: any) {
-    this.modalService.open(longContent, { scrollable: true });
+  openContent(content: any) {
+
   }
 }
