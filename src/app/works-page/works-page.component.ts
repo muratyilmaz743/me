@@ -1,4 +1,5 @@
 import {Component, ViewEncapsulation, OnInit, ElementRef, ViewChild} from '@angular/core';
+
 declare var $: any;
 // import Swiper core and required modules
 import SwiperCore, {Pagination, Navigation} from "swiper";
@@ -19,10 +20,24 @@ SwiperCore.use([Pagination, Navigation]);
         <img src="../../assets/arcelikBackground.png" alt="arcelik"/>
         <h2 (click)="onClickHeader(this.arcelikHeader)" #arcelikHeader id="arcelikHeader">Arçelik B2C Hybris
           Project</h2>
+        <div class="container-md contents" id="arcelikContent">
+          <div class="contentDetail">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Facilisis magna etiam tempor orci eu lobortis elementum nibh tellus. Pharetra sit
+              amet aliquam id diam maecenas ultricies mi eget. Pulvinar neque laoreet suspendisse interdum consectetur
+              libero id faucibus nisl. Vel pharetra vel turpis nunc eget lorem dolor. Ultricies mi eget mauris pharetra
+              et ultrices neque ornare aenean. Pellentesque diam volutpat commodo sed. Egestas sed tempus urna et
+              pharetra pharetra. Posuere ac ut consequat semper viverra nam libero justo. Enim diam vulputate ut
+              pharetra. Ac auctor augue mauris augue neque gravida. Commodo viverra maecenas accumsan lacus vel. Mattis
+              pellentesque id nibh tortor id aliquet lectus proin. Donec massa sapien faucibus et molestie ac feugiat
+              sed lectus. Facilisis magna etiam tempor orci eu lobortis elementum nibh tellus.</p>
+          </div>
+        </div>
       </ng-template>
       <ng-template swiperSlide>
         <img src="../../assets/underWorkBackground.jpg" alt="onwork"/>
-        <h2 (click)="onClickHeader(this.carsiHeader)" #carsiHeader id="carsiHeader">Çarşıbaşı Kozmetik ve Tekstil | SAP Hybris B2C
+        <h2 (click)="onClickHeader(this.carsiHeader)" #carsiHeader id="carsiHeader">Çarşıbaşı Kozmetik ve Tekstil | SAP
+          Hybris B2C
           Project
           <i>OnWork</i>
         </h2>
@@ -33,15 +48,7 @@ SwiperCore.use([Pagination, Navigation]);
           <i>OnWork</i>
         </h2>
       </ng-template>
-    </swiper>
-    <ng-template #contents>
-        <div class="container">
-          <h2>Arçelik</h2>
-          <div class="contentDetail">
-            <p>Murat Yılmaz arçelik projesi</p>
-          </div>
-        </div>
-    </ng-template>`,
+    </swiper>`,
   styleUrls: ['./works-page.component.scss'],
   encapsulation: ViewEncapsulation.None,
 
@@ -50,6 +57,8 @@ export class WorksPageComponent implements OnInit {
   @ViewChild('arcelikHeader') arcelikHeader: ElementRef | undefined
   @ViewChild('carsiHeader') carsiHeader: ElementRef | undefined
   @ViewChild('pentiHeader') pentiHeader: ElementRef | undefined
+  @ViewChild('arcelikContent') arcelikContent: ElementRef | undefined
+
 
 
   constructor(private modalService: NgbModal) {
@@ -66,7 +75,9 @@ export class WorksPageComponent implements OnInit {
   onSwiper(swiper: any) {
   }
 
-  onClickHeader(elm: any){
+  onClickHeader(elm: any) {
+    let modal = document.getElementsByClassName('contents');
+    console.log(modal)
     if (elm?.classList.contains('upped')) {
       // @ts-ignore
       elm.style.marginTop = "0";
@@ -74,7 +85,7 @@ export class WorksPageComponent implements OnInit {
     } else {
       elm?.classList.add('upped');
       // @ts-ignore
-      elm?.style.marginTop = "-75vh";
+      elm.style.marginTop = "-75vh";
     }
   }
 

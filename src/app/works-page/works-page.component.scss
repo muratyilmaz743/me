@@ -82,7 +82,20 @@
 
 }
 
-.contents .contentDetail {
+.contents  {
+  margin-right: 25px;
+  z-index: 999;
   width: 80%;
+  background-color: rgba(255,255,255, 0.6);
+  border-radius: 20px;
+  font-size: larger;
+  font-weight: bold;
+  display: inline;
+  position: absolute;
+  margin-top: 102vmax;
+  -webkit-transition: .7s;
+  -moz-transition: .7s;
+  -o-transition: .7s;
+  transition: .7s;
 }
 
