@@ -1,6 +1,6 @@
 body {
   min-height: 100vh;
-  background-color: #680000;
+  background-color: #1c3b6d;
 }
 section {
   position: relative;
@@ -15,28 +15,24 @@ section {
 section::before {
   content: "";
   position: absolute;
-  bottom: 0;
+  top: 0;
   width: 100%;
-  height: 10%;
-  background: linear-gradient(to top, #680000, transparent);
+  height: 35%;
+  background: linear-gradient(to bottom, #657da6, transparent);
   z-index: 1000;
 }
 section img {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
-  object-fit: cover;
+
 }
 section img#marsBack {
   z-index: 8;
 }
-section img#marsFront {
-  z-index: 10;
-}
 #myName {
-  color: #a32d43;
+  color: #acc7c4;
   position: absolute;
   white-space: nowrap;
   font-size: 6vw;
@@ -47,12 +43,16 @@ section img#marsFront {
 #buttons {
   z-index: 11;
   pointer-events: none;
+
 }
 .mainButtons {
   margin: 1vh;
+  background-color: #e6f4f1;
+  color: #4275b0;
+  border-color: #4275b0;
 }
 // Main page bouncing arrow
-#bounce {
+/*#bounce {
   -moz-animation: bounce 4s infinite;
   -webkit-animation: bounce 4s infinite;
   animation: bounce 4s infinite;
@@ -61,4 +61,4 @@ section img#marsFront {
   50% {
     transform: translateY(-25px);
   }
-};
+};*/

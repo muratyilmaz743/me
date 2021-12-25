@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 declare var $: any;
 
@@ -9,31 +9,20 @@ declare var $: any;
 })
 export class HomePageComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
     let myName = document.getElementById('myName');
-    let arrow = document.getElementById('bounce');
-    let button = document.getElementById('buttons');
 
     window.addEventListener('wheel', function (e) {
       var wheelDir = wheelCalculator(e.deltaY);
-      var opacityVal = $(myName).css("opacity") - wheelDir;
+      var marginVal = parseInt($(myName).css("margin-top")) - wheelDir * 200;
 
-      var sizeOfText = parseInt($(myName).css("font-size")) + wheelDir * 100;
+      if (marginVal > 0) (marginVal = 0)
+      if (marginVal < -190) (marginVal = -190)
 
-      if (sizeOfText < 94) (sizeOfText = 94)
-
-      $(myName).css("opacity", opacityVal).css("font-size", sizeOfText + "px")
-      $(button).css("opacity", 1 - opacityVal);
-
-      if ($(button).css("opacity") > 0) {
-        $(button).css("pointer-events", "auto")
-      }else{
-        $(button).css("pointer-events","none")
-      }
-
-
+      $(myName).css("margin-top", marginVal + 'px');
     });
 
     function wheelCalculator(wheelDelta: number) {
@@ -41,10 +30,6 @@ export class HomePageComponent implements OnInit {
       else if (wheelDelta < 0) return -0.3;
       else return 0;
     }
-
-    $(window).scroll(function () {
-      $(arrow).css("opacity", $(document).height() - $(window).scrollTop() - $(window).height() - 50);
-    });
   }
 
 }
