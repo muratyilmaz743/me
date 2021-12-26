@@ -1,0 +1,21 @@
+$claret : #983d70;
+
+.nav {
+  z-index: 9999;
+}
+
+.nav-link {
+  color: $claret;
+  font-size: larger;
+  font-weight: bold;
+  margin-right: 2vh;
+  padding-right: 3vh;
+}
+
+.nav-link .active {
+  background-color: $claret;
+}
+
+ul li:nth-last-child(-n+3) {
+  list-style-type: disc;
+}
