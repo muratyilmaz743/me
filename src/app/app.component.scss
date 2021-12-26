@@ -1,4 +1,4 @@
-$claret : #983d70;
+$claret: #983d70;
 
 .nav {
   z-index: 9999;
@@ -16,6 +16,8 @@ $claret : #983d70;
   background-color: $claret;
 }
 
-ul li:nth-last-child(-n+3) {
-  list-style-type: disc;
+@media screen and (min-width: 600px) {
+  ul li:nth-last-child(-n+3) {
+    list-style-type: disc;
+  }
 }
