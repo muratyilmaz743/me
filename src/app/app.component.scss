@@ -1,4 +1,25 @@
 $claret: #983d70;
+$darkClaret: #4b1e37;
+
+.link {
+  position: relative;
+  white-space: nowrap;
+}
+
+.link::before,
+.link::after {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  top: 100%;
+  left: 0;
+  pointer-events: none;
+}
+
+.link::before {
+  content: '';
+}
 
 .nav {
   z-index: 9999;
@@ -8,21 +29,37 @@ $claret: #983d70;
   color: $claret;
   font-size: larger;
   font-weight: bold;
-  margin: 2vh 2vh 0 0;
-  padding-right: 1.5vh;
+  margin: auto 1.5vh;
+}
+
+.link--elara::before {
+  transform-origin: 50% 100%;
+  transition: clip-path 0.3s, transform 0.3s cubic-bezier(0.2, 1, 0.8, 1);
+  clip-path: polygon(0% 0%, 0% 100%, 0 100%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%, 100% 100%, 100% 0%);
+}
+
+.link--elara:hover::before {
+  transform: translate3d(0, 2px, 0) scale3d(1.08, 3, 1);
+  clip-path: polygon(0% 0%, 0% 100%, 50% 100%, 50% 0, 50% 0, 50% 100%, 50% 100%, 0 100%, 100% 100%, 100% 0%);
+}
+
+.link--elara span {
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.2, 1, 0.8, 1);
+}
+
+.link--elara:hover span {
+  transform: translate3d(0, -2px, 0);
 }
 
 .nav-link .active {
-  background-color: $claret;
+  color: white;
 }
 
-@media screen and (min-width: 600px) {
-  ul li:nth-last-child(-n+3) {
-    list-style-type: disc;
-  }
-}
 @media screen and (max-width: 600px) {
   ul {
     padding-top: 3vh;
   }
 }
+
+
