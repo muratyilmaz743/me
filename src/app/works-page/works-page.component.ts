@@ -87,10 +87,11 @@ export class WorksPageComponent implements OnInit {
 
 
   constructor(private modalService: NgbModal) {
+
   }
 
   ngOnInit(): void {
-
+    document.getElementById("worksLink")?.classList.add("current");
   }
 
   onSlideChange() {

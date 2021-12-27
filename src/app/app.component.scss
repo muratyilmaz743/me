@@ -23,6 +23,7 @@ $darkClaret: #4b1e37;
 
 .nav {
   z-index: 9999;
+  margin-top: 0.5vh;
 }
 
 .nav-link {
@@ -52,8 +53,8 @@ $darkClaret: #4b1e37;
   transform: translate3d(0, -2px, 0);
 }
 
-.nav-link .active {
-  color: white;
+.nav-item .current {
+  color: $darkClaret;
 }
 
 @media screen and (max-width: 600px) {

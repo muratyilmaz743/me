@@ -13,6 +13,8 @@ export class HomePageComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    document.getElementById("homeLink")?.classList.add("current");
+
     let myName = document.getElementById('myName');
 
     window.addEventListener('wheel', function (e) {

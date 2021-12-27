@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-links-page',
@@ -10,6 +10,7 @@ export class LinksPageComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    document.getElementById("linkLink")?.classList.add("current");
   }
 
 }

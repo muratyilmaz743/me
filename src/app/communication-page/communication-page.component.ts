@@ -10,6 +10,8 @@ export class CommunicationPageComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    document.getElementById("commLink")?.classList.add("current");
+
   }
 
 }
