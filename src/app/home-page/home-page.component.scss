@@ -1,7 +1,10 @@
+@import "src/styles";
+
 body {
   min-height: 100vh;
   background-color: #1c3b6d;
 }
+
 section {
   position: relative;
   width: 100%;
@@ -12,6 +15,7 @@ section {
   align-items: center;
   overflow: hidden;
 }
+
 section::before {
   content: "";
   position: absolute;
@@ -21,6 +25,7 @@ section::before {
   background: linear-gradient(to bottom, #657da6, transparent);
   z-index: 1000;
 }
+
 section img {
   position: absolute;
   bottom: 0;
@@ -28,26 +33,41 @@ section img {
   width: 100%;
 
 }
+
 #myName {
-  color: #983d70;
-  position: absolute;
-  white-space: nowrap;
   font-size: 6vw;
-  z-index: 9;
-  font-weight: bolder;
-  letter-spacing: 7px;
+  letter-spacing: 9px;
 }
+
+#nameTag {
+  z-index: 9;
+  top: 25%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border: 3px solid $likeWhite;
+  color: #983d70;
+  white-space: nowrap;
+  text-align: center;
+}
+
+#tag {
+  color: $likeWhite;
+}
+
 #buttons {
   z-index: 11;
   pointer-events: none;
 
 }
+
 .mainButtons {
   margin: 1vh;
   background-color: #e6f4f1;
   color: #4275b0;
   border-color: #4275b0;
 }
+
 // Main page bouncing arrow
 /*#bounce {
   -moz-animation: bounce 4s infinite;

@@ -17,7 +17,7 @@ export class HomePageComponent implements OnInit {
 
     let myName = document.getElementById('myName');
 
-    window.addEventListener('wheel', function (e) {
+    /*window.addEventListener('wheel', function (e) {
       var wheelDir = wheelCalculator(e.deltaY);
       var marginVal = parseInt($(myName).css("margin-top")) - wheelDir * 200;
 
@@ -25,7 +25,7 @@ export class HomePageComponent implements OnInit {
       if (marginVal < -190) (marginVal = -190)
 
       $(myName).css("margin-top", marginVal + 'px');
-    });
+    });*/
 
     function wheelCalculator(wheelDelta: number) {
       if (wheelDelta > 0) return 0.3;
