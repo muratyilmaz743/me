@@ -1,5 +1,4 @@
-$claret: #983d70;
-$darkClaret: #4b1e37;
+@import "src/styles";
 
 .link {
   position: relative;
@@ -28,9 +27,13 @@ $darkClaret: #4b1e37;
 
 .nav-link {
   color: $claret;
-  font-size: larger;
+  font-size: medium;
   font-weight: bold;
   margin: auto 1.5vh;
+}
+
+.nav-link:hover {
+  color: $darkClaret;
 }
 
 .link--elara::before {
