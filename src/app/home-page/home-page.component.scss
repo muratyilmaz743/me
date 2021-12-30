@@ -42,6 +42,7 @@ body #background {
 #nameTag {
   z-index: 9;
   top: 25%;
+  left: 21%;
   position: absolute;
   background-color: rgba(0, 0, 0, 0.4);
   padding: 20px;
@@ -55,16 +56,36 @@ body #background {
   color: $likeWhite;
 }
 
-#whoAmI{
-  z-index: 9;
+#whoAmI {
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
+  max-width: 70vh;
+  top: 10%;
 }
 
-#myPic {
-  width: 50vh;
+#whoAmI p {
+  z-index: 9;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 90vh;
 }
+
+#whoAmI img {
+  width: 50vh;
+  position: relative;
+
+}
+
+@media screen and (max-width: 600px) {
+  #myPic {
+    display: none;
+  }
+}
+
 
 // Main page bouncing arrow
 /*#bounce {
