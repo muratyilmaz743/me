@@ -33,6 +33,44 @@ SwiperCore.use([Pagination, Navigation]);
               sed lectus. Facilisis magna etiam tempor orci eu lobortis elementum nibh tellus.</p>
           </div>
         </div>
+        <div id="exampleImages" class="container-fluid">
+          <div class="row">
+            <div class="col-sm">
+              <img src="../../assets/arcelikBackground.png" alt="arcelik">
+            </div>
+            <div class="col-sm">
+            </div>
+            <div class="col-sm">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm">
+            </div>
+            <div class="col-sm">
+            </div>
+            <div class="col-sm">
+              <img src="../../assets/arcelik2.png" alt="arcelik">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm">
+              <img src="../../assets/arcelik3.png" alt="arcelik">
+            </div>
+            <div class="col-sm">
+            </div>
+            <div class="col-sm">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm">
+            </div>
+            <div class="col-sm">
+            </div>
+            <div class="col-sm">
+              <img src="../../assets/arcelik4.png" alt="arcelik">
+            </div>
+          </div>
+        </div>
       </ng-template>
       <ng-template swiperSlide>
         <img src="../../assets/underWorkBackground.jpg" alt="onwork"/>
