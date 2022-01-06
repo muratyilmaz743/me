@@ -17,7 +17,7 @@ SwiperCore.use([Pagination, Navigation]);
       (slideChange)="onSlideChange()"
       class="mySwiper">
       <ng-template swiperSlide>
-        <img src="../../assets/arcelikBackground.png" alt="arcelik"/>
+
         <h2 (click)="onClickHeader(this.arcelikHeader)" #arcelikHeader id="arcelikHeader">Arçelik B2C Hybris
           Project</h2>
         <div class="container-md contents" id="arcelikContent">
@@ -141,18 +141,22 @@ export class WorksPageComponent implements OnInit {
 
   onClickHeader(elm: any) {
     let modal = $(elm).nextAll('.contents:first');
+    let imgs = $("#exampleImages img");
     if (elm?.classList.contains('upped')) {
       // @ts-ignore
       elm.style.marginTop = "0";
       modal.css('marginTop', '120vmax');
       modal.addClass('upped')
       elm.classList.remove('upped')
+      imgs.css("filter","blur(4px)");
+
     } else {
       elm.classList.add('upped');
       modal.removeClass('upped');
       // @ts-ignore
       elm.style.marginTop = "-48vh";
       modal.css('marginTop', '10vmax');
+      imgs.css("filter","blur(0)");
     }
   }
 

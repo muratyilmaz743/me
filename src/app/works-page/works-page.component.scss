@@ -86,13 +86,21 @@
   margin-right: 25px;
   z-index: 999;
   width: 40%;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(200, 200, 200, 0.5);
   border-radius: 20px;
   font-size: 18px;
   font-weight: bold;
   display: inline;
   position: absolute;
   margin-top: 102vmax;
+  -webkit-transition: .7s;
+  -moz-transition: .7s;
+  -o-transition: .7s;
+  transition: .7s;
+}
+
+#exampleImages img{
+  filter: blur(4px);
   -webkit-transition: .7s;
   -moz-transition: .7s;
   -o-transition: .7s;
