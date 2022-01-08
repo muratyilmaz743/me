@@ -9,23 +9,28 @@
   -moz-transition: .7s;
   -o-transition: .7s;
   transition: .7s;
-  flex-direction: column;
 }
 
 #icons svg {
-  width: 360px;
   height: 80px;
+  width: 80px;
   padding-top: 20px;
   -moz-transition: .7s;
   -o-transition: .7s;
   transition: .7s;
+  z-index: 999;
   &:hover{
-    padding-right: 250px;
+
   }
 }
 
-#icons li {
-  padding: 25px;
+#hover{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
+
 
 
