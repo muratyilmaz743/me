@@ -2,7 +2,7 @@
 
 body {
   min-height: 100vh;
-  background-color: #1c3b6d;
+  background-color: $back;
 }
 
 section {
@@ -35,13 +35,13 @@ body #background {
   left: 21%;
   position: absolute;
   padding: 20px;
-  color: #983d70;
+  color: $darkClaret;
   white-space: nowrap;
   text-align: center;
 }
 
 #tag {
-  color: $likeWhite;
+  color: $claret;
 }
 
 #whoAmI {
@@ -51,7 +51,7 @@ body #background {
   align-items: center;
   max-width: 70vh;
   top: 10%;
-  color: $likeWhite;
+  color: $darkClaret;
 }
 
 #whoAmI p {

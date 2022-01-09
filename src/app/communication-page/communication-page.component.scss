@@ -1,5 +1,23 @@
 @import "src/styles";
 
+body{
+  min-height: 100vh;
+  background-color: $back;
+}
+
+#knowMore{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1{
+  position: absolute;
+  top: 25%;
+  text-align: center;
+  color: $darkClaret;
+}
+
 #icons, #hover {
   position: absolute;
   display: flex;
@@ -7,10 +25,6 @@
   align-items: center;
   height: 100vh;
   max-width: 100%;
-  -webkit-transition: .7s;
-  -moz-transition: .7s;
-  -o-transition: .7s;
-  transition: .7s;
 }
 
 #icons svg, #hover svg {
@@ -24,6 +38,9 @@
 
 #hover{
   z-index: 1;
+  svg{
+    fill: wheat;
+  }
 }
 
 #icons{
