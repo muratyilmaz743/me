@@ -1,36 +1,41 @@
 @import "src/styles";
 
-#icons {
+#icons, #hover {
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  max-width: 100%;
   -webkit-transition: .7s;
   -moz-transition: .7s;
   -o-transition: .7s;
   transition: .7s;
 }
 
-#icons svg {
+#icons svg, #hover svg {
   height: 80px;
   width: 80px;
   padding-top: 20px;
-  -moz-transition: .7s;
-  -o-transition: .7s;
-  transition: .7s;
-  z-index: 999;
-  &:hover{
-
-  }
+  -moz-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
 }
 
 #hover{
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  z-index: 1;
 }
+
+#icons{
+  z-index: 20;
+  svg:hover{
+    position: relative;
+    padding-right: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+
 
 
 
