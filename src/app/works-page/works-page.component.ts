@@ -73,7 +73,7 @@ SwiperCore.use([Pagination, Navigation]);
         </div>
       </ng-template>
       <ng-template swiperSlide>
-        <img src="../../assets/underWorkBackground.jpg" alt="onwork"/>
+        <img src="../../assets/settings.png" alt="onwork"/>
         <h2 (click)="onClickHeader(this.carsiHeader)" #carsiHeader id="carsiHeader">Çarşıbaşı Kozmetik ve Tekstil | SAP
           Hybris B2C
           Project
@@ -94,7 +94,7 @@ SwiperCore.use([Pagination, Navigation]);
         </div>
       </ng-template>
       <ng-template swiperSlide>
-        <img src="../../assets/underWorkBackground.jpg" alt="onwork"/>
+        <img src="../../assets/settings.png" alt="onwork"/>
         <h2 (click)="onClickHeader(this.pentiHeader)" #pentiHeader id="pentiHeader">Penti E-Commerce Cloud B2C Projesi
           <i>OnWork</i>
         </h2>
