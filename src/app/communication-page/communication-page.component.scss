@@ -15,7 +15,7 @@ h1{
   position: absolute;
   top: 25%;
   text-align: center;
-  color: $darkClaret;
+  color: $myGreen;
 }
 
 #icons, #hover {
@@ -39,7 +39,7 @@ h1{
 #hover{
   z-index: 1;
   svg{
-    fill: $claret;
+    fill: $myLightGreen;
   }
 }
 

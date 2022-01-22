@@ -35,13 +35,13 @@ body #background {
   left: 21%;
   position: absolute;
   padding: 20px;
-  color: $darkClaret;
+  color: $myGreen;
   white-space: nowrap;
   text-align: center;
 }
 
 #tag {
-  color: $likeWhite;
+  color: $myWhite;
 }
 
 #whoAmI {
@@ -51,29 +51,29 @@ body #background {
   align-items: center;
   max-width: 70vh;
   top: 10%;
-  color: $darkClaret;
+  color: $myGreen;
+  p {
+    z-index: 9;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 60vh;
+  }
 }
 
-#whoAmI p {
-  z-index: 9;
-  display: flex;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  width: 60vh;
-}
-
-#whoAmI img {
-  width: 50vh;
-  position: relative;
-  bottom: 6vh;
-}
+  img{
+    position: relative;
+    top: 2vh;
+    height: 90vh ;
+    border: 20px solid $myGray;
+  }
 
 @media screen and (max-width: 600px) {
   #myPic {
     display: none;
   }
-  #whoAmI p{
+  #whoAmI p {
     width: 100%;
   }
 }
