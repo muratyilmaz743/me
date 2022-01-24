@@ -25,14 +25,13 @@ body #background {
 }
 
 #myName {
-  font-size: 4vw;
+  font-size: 6vw;
   letter-spacing: 9px;
 }
 
 #nameTag {
   z-index: 9;
   top: 25%;
-  left: 21%;
   position: absolute;
   padding: 20px;
   color: $myGreen;
@@ -52,6 +51,7 @@ body #background {
   max-width: 70vh;
   top: 10%;
   color: $myGreen;
+
   p {
     z-index: 9;
     display: flex;
@@ -62,12 +62,13 @@ body #background {
   }
 }
 
-  img{
-    position: relative;
-    top: 2vh;
-    height: 90vh ;
-    border: 20px solid $myGray;
-  }
+img {
+  position: relative;
+  top: 2vh;
+  height: 90vh;
+  border: 5px solid $myWhite;
+  border-radius: 58px 0 58px 0;
+}
 
 @media screen and (max-width: 600px) {
   #myPic {
@@ -78,6 +79,11 @@ body #background {
   }
 }
 
+@media screen and (min-width: 600px) {
+  #nameTag {
+    left: 16vw;
+  }
+}
 
 // Main page bouncing arrow
 /*#bounce {
