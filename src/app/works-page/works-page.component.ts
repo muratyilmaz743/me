@@ -17,57 +17,21 @@ SwiperCore.use([Pagination, Navigation]);
       (slideChange)="onSlideChange()"
       class="mySwiper">
       <ng-template swiperSlide>
+        <div class="container-fluid">
+          <div class="grid-container">
+            <div class="companyName grid-item" style="background-color: red">
+                <h1>ARÇELİK <br> B2C</h1>
+            </div>
+            <div class="pics grid-item" style="background-color: #3AAFA9">
 
-        <h2 (click)="onClickHeader(this.arcelikHeader)" #arcelikHeader id="arcelikHeader">Arçelik B2C Hybris
-          Project</h2>
-        <div class="container-md contents" id="arcelikContent">
-          <div class="contentDetail">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Facilisis magna etiam tempor orci eu lobortis elementum nibh tellus. Pharetra sit
-              amet aliquam id diam maecenas ultricies mi eget. Pulvinar neque laoreet suspendisse interdum consectetur
-              libero id faucibus nisl. Vel pharetra vel turpis nunc eget lorem dolor. Ultricies mi eget mauris pharetra
-              et ultrices neque ornare aenean. Pellentesque diam volutpat commodo sed. Egestas sed tempus urna et
-              pharetra pharetra. Posuere ac ut consequat semper viverra nam libero justo. Enim diam vulputate ut
-              pharetra. Ac auctor augue mauris augue neque gravida. Commodo viverra maecenas accumsan lacus vel. Mattis
-              pellentesque id nibh tortor id aliquet lectus proin. Donec massa sapien faucibus et molestie ac feugiat
-              sed lectus. Facilisis magna etiam tempor orci eu lobortis elementum nibh tellus.</p>
-          </div>
-        </div>
-        <div id="exampleImages" class="container-fluid">
-          <div class="row">
-            <div class="col-sm">
-              <img src="../../assets/arcelikBackground.png" alt="arcelik">
             </div>
-            <div class="col-sm">
-            </div>
-            <div class="col-sm">
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm">
-            </div>
-            <div class="col-sm">
-            </div>
-            <div class="col-sm">
-              <img src="../../assets/arcelik2.png" alt="arcelik">
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm">
-              <img src="../../assets/arcelik3.png" alt="arcelik">
-            </div>
-            <div class="col-sm">
-            </div>
-            <div class="col-sm">
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm">
-            </div>
-            <div class="col-sm">
-            </div>
-            <div class="col-sm">
-              <img src="../../assets/arcelik4.png" alt="arcelik">
+            <div class="definition grid-item" style="background-color: #818c8a">
+              <p class="details">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores at beatae culpa debitis deserunt
+                doloremque dolorum ducimus eaque enim est expedita inventore, ipsum iure nulla quaerat, sequi totam, ut
+                vero.
+              </p>
+              <a href="https://www.arcelik.com" target="_blank">Arçelik</a>
             </div>
           </div>
         </div>
@@ -146,7 +110,7 @@ export class WorksPageComponent implements OnInit {
       modal.css('marginTop', '120vmax');
       modal.addClass('upped')
       elm.classList.remove('upped')
-      imgs.css("filter","blur(4px)");
+      imgs.css("filter", "blur(4px)");
 
     } else {
       elm.classList.add('upped');
@@ -154,7 +118,7 @@ export class WorksPageComponent implements OnInit {
       // @ts-ignore
       elm.style.marginTop = "-48vh";
       modal.css('marginTop', '10vmax');
-      imgs.css("filter","blur(0)");
+      imgs.css("filter", "blur(0)");
     }
   }
 
