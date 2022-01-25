@@ -19,13 +19,13 @@ SwiperCore.use([Pagination, Navigation]);
       <ng-template swiperSlide>
         <div class="container-fluid">
           <div class="grid-container">
-            <div class="companyName grid-item" style="background-color: red">
-                <h1>ARÇELİK <br> B2C</h1>
+            <div class="companyLogo grid-item">
+              <img src="../../assets/arcelikCompanyCover.jpg" alt="Arçelik Logo">
             </div>
-            <div class="pics grid-item" style="background-color: #3AAFA9">
-
+            <div class="companyName grid-item">
+              <h1>ARÇELİK <br> B2C</h1>
             </div>
-            <div class="definition grid-item" style="background-color: #818c8a">
+            <div class="definition grid-item">
               <p class="details">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores at beatae culpa debitis deserunt
                 doloremque dolorum ducimus eaque enim est expedita inventore, ipsum iure nulla quaerat, sequi totam, ut

@@ -104,21 +104,42 @@
 
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto;
   padding: 10px;
-  grid-gap: 90px;
+  grid-column-gap: 90px;
+  grid-row-gap: 45px;
   height: 100%;
+  grid-template-columns: auto auto;
   .grid-item {
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
     padding: 20px;
     text-align: center;
   }
-  .companyName {
+  .companyLogo {
     grid-row-start: 1;
     grid-row-end: 3;
     height: 40vw;
-    width: 40rem;
+    width: 40vw;
+    display: block;
+    img {
+      min-width: 100%;
+      min-height: 100%;
+      border: 5px solid $myWhite;
+      border-radius: 0 58px 0 58px;
+    }
+  }
+  .companyName {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    h1 {
+      font-size: 90px;
+      color: $myLightGreen;
+    }
+  }
+  .definition {
+    p {
+      color: $myWhite;
+      text-align: left;
+    }
   }
 }
 
