@@ -9,72 +9,15 @@ SwiperCore.use([Pagination, Navigation]);
 
 @Component({
   selector: 'app-works-page',
-  template: `
-    <swiper
-      [pagination]="{type: 'progressbar'}"
-      [navigation]="true"
-      (swiper)="onSwiper($event)"
-      (slideChange)="onSlideChange()"
-      class="mySwiper">
-      <ng-template swiperSlide>
-        <div class="container-fluid">
-          <div class="grid-container">
-            <div class="companyLogo grid-item">
-              <img src="../../assets/arcelikCompanyCover.jpg" alt="Arçelik Logo">
-            </div>
-            <div class="companyName grid-item">
-              <h1>ARÇELİK <br> B2C</h1>
-            </div>
-            <div class="definition grid-item">
-              <p class="details">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores at beatae culpa debitis deserunt
-                doloremque dolorum ducimus eaque enim est expedita inventore, ipsum iure nulla quaerat, sequi totam, ut
-                vero.
-              </p>
-              <a href="https://www.arcelik.com" target="_blank">Arçelik</a>
-            </div>
-          </div>
-        </div>
-      </ng-template>
-      <ng-template swiperSlide>
-        <img src="../../assets/settings.png" alt="onwork"/>
-        <h2 (click)="onClickHeader(this.carsiHeader)" #carsiHeader id="carsiHeader">Çarşıbaşı Kozmetik ve Tekstil | SAP
-          Hybris B2C
-          Project
-          <i>OnWork</i>
-        </h2>
-        <div class="container-md contents" id="carsiContent">
-          <div class="contentDetail">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Facilisis magna etiam tempor orci eu lobortis elementum nibh tellus. Pharetra sit
-              amet aliquam id diam maecenas ultricies mi eget. Pulvinar neque laoreet suspendisse interdum consectetur
-              libero id faucibus nisl. Vel pharetra vel turpis nunc eget lorem dolor. Ultricies mi eget mauris pharetra
-              et ultrices neque ornare aenean. Pellentesque diam volutpat commodo sed. Egestas sed tempus urna et
-              pharetra pharetra. Posuere ac ut consequat semper viverra nam libero justo. Enim diam vulputate ut
-              pharetra. Ac auctor augue mauris augue neque gravida. Commodo viverra maecenas accumsan lacus vel. Mattis
-              pellentesque id nibh tortor id aliquet lectus proin. Donec massa sapien faucibus et molestie ac feugiat
-              sed lectus. Facilisis magna etiam tempor orci eu lobortis elementum nibh tellus.</p>
-          </div>
-        </div>
-      </ng-template>
-      <ng-template swiperSlide>
-        <h2 (click)="onClickHeader(this.pentiHeader)" #pentiHeader id="pentiHeader">Penti E-Commerce Cloud B2C Projesi
-        </h2>
-        <div class="container-md contents" id="pentiContent">
-          <div class="contentDetail">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Facilisis magna etiam tempor orci eu lobortis elementum nibh tellus. Pharetra sit
-              amet aliquam id diam maecenas ultricies mi eget. Pulvinar neque laoreet suspendisse interdum consectetur
-              libero id faucibus nisl. Vel pharetra vel turpis nunc eget lorem dolor. Ultricies mi eget mauris pharetra
-              et ultrices neque ornare aenean. Pellentesque diam volutpat commodo sed. Egestas sed tempus urna et
-              pharetra pharetra. Posuere ac ut consequat semper viverra nam libero justo. Enim diam vulputate ut
-              pharetra. Ac auctor augue mauris augue neque gravida. Commodo viverra maecenas accumsan lacus vel. Mattis
-              pellentesque id nibh tortor id aliquet lectus proin. Donec massa sapien faucibus et molestie ac feugiat
-              sed lectus. Facilisis magna etiam tempor orci eu lobortis elementum nibh tellus.</p>
-          </div>
-        </div>
-      </ng-template>
-    </swiper>`,
+  template: `<swiper
+    [slidesPerView]="3"
+    [spaceBetween]="30"
+    [centeredSlides]="true"
+    class="mySwiper">
+    <ng-template swiperSlide>Arçelik</ng-template>
+    <ng-template swiperSlide>Penti</ng-template>
+    <ng-template swiperSlide>Çarşıbaşı</ng-template>
+  </swiper>`,
   styleUrls: ['./works-page.component.scss'],
   encapsulation: ViewEncapsulation.None,
 
