@@ -14,9 +14,27 @@ SwiperCore.use([Pagination, Navigation]);
     [spaceBetween]="30"
     [centeredSlides]="true"
     class="mySwiper">
-    <ng-template swiperSlide>Arçelik</ng-template>
-    <ng-template swiperSlide>Penti</ng-template>
-    <ng-template swiperSlide>Çarşıbaşı</ng-template>
+    <ng-template swiperSlide>
+      <div id="arcelikWork">
+        <img src="" alt="" id="logo">
+        <h4 class="header"></h4>
+        <p class="definition"></p>
+      </div>
+    </ng-template>
+    <ng-template swiperSlide>
+      <div id="pentiWork">
+        <img src="" alt="" id="logo">
+        <h4 class="header"></h4>
+        <p class="definition"></p>
+      </div>
+    </ng-template>
+    <ng-template swiperSlide>
+      <div id="carsibasiWork">
+        <img src="" alt="" id="logo">
+        <h4 class="header"></h4>
+        <p class="definition"></p>
+      </div>
+    </ng-template>
   </swiper>`,
   styleUrls: ['./works-page.component.scss'],
   encapsulation: ViewEncapsulation.None,
@@ -37,32 +55,7 @@ export class WorksPageComponent implements OnInit {
     document.getElementById("worksLink")?.classList.add("current");
   }
 
-  onSlideChange() {
-    console.log('slide change');
-  }
-
   onSwiper(swiper: any) {
-  }
-
-  onClickHeader(elm: any) {
-    let modal = $(elm).nextAll('.contents:first');
-    let imgs = $("#exampleImages img");
-    if (elm?.classList.contains('upped')) {
-      // @ts-ignore
-      elm.style.marginTop = "0";
-      modal.css('marginTop', '120vmax');
-      modal.addClass('upped')
-      elm.classList.remove('upped')
-      imgs.css("filter", "blur(4px)");
-
-    } else {
-      elm.classList.add('upped');
-      modal.removeClass('upped');
-      // @ts-ignore
-      elm.style.marginTop = "-48vh";
-      modal.css('marginTop', '10vmax');
-      imgs.css("filter", "blur(0)");
-    }
   }
 
   openContent(content: any) {
