@@ -15,25 +15,23 @@ SwiperCore.use([Pagination, Navigation]);
     [centeredSlides]="true"
     class="mySwiper">
     <ng-template swiperSlide>
-      <div id="arcelikWork">
-        <img src="../../assets/arcelikLogoBackground.jpg" alt="" id="logo">
-        <img src="../../assets/arcelikWorkBackground.jpg" alt="" id="back">
+      <div id="arcelikWork" style="background: url('../../assets/arcelikWorkBackground.jpg') no-repeat; background-size: cover; ">
+        <img src="../../assets/arcelikLogoBackground.jpg" alt="" class="logo">
         <h4 class="header">Arçelik B2C</h4>
+        <!--TODO TO BOTTOM-->
         <p class="definition"></p>
       </div>
     </ng-template>
     <ng-template swiperSlide>
-      <div id="pentiWork">
-        <img src="../../assets/pentiLogoBackground.jpg" alt="" id="logo">
-        <img src="../../assets/pentiWorkBackground.jpg" alt="" id="back">
+      <div id="pentiWork" style="background: url('../../assets/pentiWorkBackground.jpg') no-repeat">
+        <!--<img src="../../assets/pentiLogoBackground.jpg" alt="" class="logo">-->
         <h4 class="header">Penti</h4>
         <p class="definition"></p>
       </div>
     </ng-template>
     <ng-template swiperSlide>
-      <div id="carsibasiWork">
-        <img src="../../assets/ÇarşıbaşıLogoBackground.jpg" alt="" id="logo">
-        <img src="../../assets/underWorkBackground.jpg" alt="" id="back">
+      <div id="carsibasiWork" style="background: url('../../assets/underWorkBackground.jpg') no-repeat">
+        <img src="../../assets/ÇarşıbaşıLogoBackground.jpg" alt="" class="logo">
         <h4 class="header">Çarşıbaşı B2C</h4>
         <p class="definition"></p>
       </div>
