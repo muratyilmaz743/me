@@ -16,22 +16,25 @@ SwiperCore.use([Pagination, Navigation]);
     class="mySwiper">
     <ng-template swiperSlide>
       <div id="arcelikWork">
-        <img src="" alt="" id="logo">
-        <h4 class="header"></h4>
+        <img src="../../assets/arcelikLogoBackground.jpg" alt="" id="logo">
+        <img src="../../assets/arcelikWorkBackground.jpg" alt="" id="back">
+        <h4 class="header">Arçelik B2C</h4>
         <p class="definition"></p>
       </div>
     </ng-template>
     <ng-template swiperSlide>
       <div id="pentiWork">
-        <img src="" alt="" id="logo">
-        <h4 class="header"></h4>
+        <img src="../../assets/pentiLogoBackground.jpg" alt="" id="logo">
+        <img src="../../assets/pentiWorkBackground.jpg" alt="" id="back">
+        <h4 class="header">Penti</h4>
         <p class="definition"></p>
       </div>
     </ng-template>
     <ng-template swiperSlide>
       <div id="carsibasiWork">
-        <img src="" alt="" id="logo">
-        <h4 class="header"></h4>
+        <img src="../../assets/ÇarşıbaşıLogoBackground.jpg" alt="" id="logo">
+        <img src="../../assets/underWorkBackground.jpg" alt="" id="back">
+        <h4 class="header">Çarşıbaşı B2C</h4>
         <p class="definition"></p>
       </div>
     </ng-template>
