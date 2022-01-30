@@ -2,7 +2,7 @@ import {Component, ViewEncapsulation, OnInit, ElementRef, ViewChild} from '@angu
 
 declare var $: any;
 // import Swiper core and required modules
-import SwiperCore, {Pagination, Navigation} from "swiper";
+import SwiperCore, {Pagination, Navigation, SwiperOptions} from "swiper";
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 // install Swiper modules
 SwiperCore.use([Pagination, Navigation]);
@@ -10,7 +10,7 @@ SwiperCore.use([Pagination, Navigation]);
 @Component({
   selector: 'app-works-page',
   template: `<swiper
-    [slidesPerView]="3"
+    [config]="config"
     [spaceBetween]="30"
     [centeredSlides]="true"
     class="mySwiper">
@@ -48,6 +48,23 @@ export class WorksPageComponent implements OnInit {
   @ViewChild('arcelikContent') arcelikContent: ElementRef | undefined
 
 
+  config: SwiperOptions = {
+    slidesPerView: 1,
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+      },
+      820: {
+        slidesPerView: 3,
+      },
+      1600: {
+        slidesPerView:4,
+      },
+      2000: {
+        slidesPerView:5,
+      },
+    }
+  };
   constructor(private modalService: NgbModal) {
 
   }
