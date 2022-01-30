@@ -31,7 +31,7 @@ body #background {
 
 #nameTag {
   z-index: 9;
-  top: 25%;
+  top: 24%;
   position: absolute;
   padding: 20px;
   color: $myGreen;
@@ -66,25 +66,29 @@ img {
   position: relative;
   top: 2vh;
   left: 15vw;
-  height: 90vh;
-  border-radius: 50px 10px 10px 50px ;
+  height: 75vh;
+  border-radius: 50px;
 }
 
 @media screen and (max-width: 600px) {
-  #myPic {
-    display: none;
-  }
   #whoAmI p {
     width: 100%;
   }
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 1800px) {
   #nameTag {
     left: 16vw;
   }
 }
 
+@media screen and (max-width: 1800px) {
+  body {
+    background-image: url("data:image/svg+xml,%3Csvg id='visual' viewBox='0 0 400 920' width='400' height='920' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1'%3E%3Crect x='0' y='0' width='400' height='920' fill='%23DEF2F1'%3E%3C/rect%3E%3Cpath d='M0 305L9.5 303.5C19 302 38 299 57 305.8C76 312.7 95 329.3 114 331.2C133 333 152 320 171.2 310.5C190.3 301 209.7 295 228.8 297.2C248 299.3 267 309.7 286 311.8C305 314 324 308 343 307.8C362 307.7 381 313.3 390.5 316.2L400 319L400 0L390.5 0C381 0 362 0 343 0C324 0 305 0 286 0C267 0 248 0 228.8 0C209.7 0 190.3 0 171.2 0C152 0 133 0 114 0C95 0 76 0 57 0C38 0 19 0 9.5 0L0 0Z' fill='%2317252A' stroke-linecap='round' stroke-linejoin='miter'%3E%3C/path%3E%3C/svg%3E");  }
+  #myPic {
+    display: none;
+  }
+}
 // Main page bouncing arrow
 /*#bounce {
   -moz-animation: bounce 4s infinite;
