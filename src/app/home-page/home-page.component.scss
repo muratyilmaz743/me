@@ -2,7 +2,8 @@
 
 body {
   min-height: 100vh;
-  background-image: url("data:image/svg+xml,%3Csvg id='visual' viewBox='0 0 960 540' width='960' height='540' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1'%3E%3Crect x='0' y='0' width='960' height='540' fill='%2317252A'%3E%3C/rect%3E%3Cpath d='M630 540L608.7 522C587.3 504 544.7 468 526.7 432C508.7 396 515.3 360 513.7 324C512 288 502 252 489.8 216C477.7 180 463.3 144 492.2 108C521 72 593 36 629 18L665 0L960 0L960 18C960 36 960 72 960 108C960 144 960 180 960 216C960 252 960 288 960 324C960 360 960 396 960 432C960 468 960 504 960 522L960 540Z' fill='%23DEF2F1' stroke-linecap='round' stroke-linejoin='miter'%3E%3C/path%3E%3C/svg%3E");  background-size: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg id='visual' viewBox='0 0 960 540' width='960' height='540' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1'%3E%3Crect x='0' y='0' width='960' height='540' fill='%2317252A'%3E%3C/rect%3E%3Cpath d='M630 540L608.7 522C587.3 504 544.7 468 526.7 432C508.7 396 515.3 360 513.7 324C512 288 502 252 489.8 216C477.7 180 463.3 144 492.2 108C521 72 593 36 629 18L665 0L960 0L960 18C960 36 960 72 960 108C960 144 960 180 960 216C960 252 960 288 960 324C960 360 960 396 960 432C960 468 960 504 960 522L960 540Z' fill='%23DEF2F1' stroke-linecap='round' stroke-linejoin='miter'%3E%3C/path%3E%3C/svg%3E");
+  background-size: 100%;
 }
 
 section {
@@ -13,93 +14,52 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-}
 
-body #background {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  #nameTag {
+    top: 30%;
+    position: absolute;
+    color: $myGreen;
+    text-align: center;
+    left: 17vw;
 
-}
+    #myName {
+      font-size: 6vw;
+      letter-spacing: 9px;
+    }
 
-#myName {
-  font-size: 6vw;
-  letter-spacing: 9px;
-}
+    #tag {
+      color: $myWhite;
+    }
+  }
 
-#nameTag {
-  z-index: 9;
-  top: 24%;
-  position: absolute;
-  padding: 20px;
-  color: $myGreen;
-  white-space: nowrap;
-  text-align: center;
-}
-
-#tag {
-  color: $myWhite;
-}
-
-#whoAmI {
-  display: flex;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  max-width: 70vh;
-  top: 10%;
-  color: $myGreen;
-
-  p {
-    z-index: 9;
+  #whoAmI {
     display: flex;
     position: relative;
-    justify-content: center;
     align-items: center;
+    top: 10%;
+    color: $myGreen;
     width: 55vh;
+    right: 5vw;
+  }
+
+  .imgWrapper {
+    position: relative;
+    top: 2vh;
+    left: 15vw;
+    img {
+      height: 75vh;
+      border-radius: 50px;
+    }
+    .bottom-left {
+      font-family: 'Poppins', sans-serif;
+      position: absolute;
+      bottom: 12px;
+      left: 32px;
+    }
   }
 }
 
-img {
-  position: relative;
-  top: 2vh;
-  left: 15vw;
-  height: 75vh;
-  border-radius: 50px;
-}
 
-@media screen and (max-width: 600px) {
-  #whoAmI p {
-    width: 100%;
-  }
-}
 
-@media screen and (min-width: 1800px) {
-  #nameTag {
-    left: 16vw;
-  }
-  #whoAmI {
-    right: 10vw
-  }
-}
 
-@media screen and (max-width: 1800px) {
-  body {
-    background-image: url("data:image/svg+xml,%3Csvg id='visual' viewBox='0 0 400 920' width='400' height='920' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1'%3E%3Crect x='0' y='0' width='400' height='920' fill='%23DEF2F1'%3E%3C/rect%3E%3Cpath d='M0 305L9.5 303.5C19 302 38 299 57 305.8C76 312.7 95 329.3 114 331.2C133 333 152 320 171.2 310.5C190.3 301 209.7 295 228.8 297.2C248 299.3 267 309.7 286 311.8C305 314 324 308 343 307.8C362 307.7 381 313.3 390.5 316.2L400 319L400 0L390.5 0C381 0 362 0 343 0C324 0 305 0 286 0C267 0 248 0 228.8 0C209.7 0 190.3 0 171.2 0C152 0 133 0 114 0C95 0 76 0 57 0C38 0 19 0 9.5 0L0 0Z' fill='%2317252A' stroke-linecap='round' stroke-linejoin='miter'%3E%3C/path%3E%3C/svg%3E");  }
-  #myPic {
-    display: none;
-  }
-}
-// Main page bouncing arrow
-/*#bounce {
-  -moz-animation: bounce 4s infinite;
-  -webkit-animation: bounce 4s infinite;
-  animation: bounce 4s infinite;
-}
-@keyframes bounce {
-  50% {
-    transform: translateY(-25px);
-  }
-};*/
+
