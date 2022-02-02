@@ -1,4 +1,4 @@
-import {Component, ViewEncapsulation, OnInit, ElementRef, ViewChild} from '@angular/core';
+import {Component, ViewEncapsulation, OnInit} from '@angular/core';
 
 declare var $: any;
 // import Swiper core and required modules
@@ -9,45 +9,27 @@ SwiperCore.use([Pagination, Navigation]);
 
 @Component({
   selector: 'app-works-page',
-  template: `<swiper
-    [config]="config"
-    [spaceBetween]="30"
-    [centeredSlides]="true"
-    class="mySwiper">
-    <ng-template swiperSlide>
-      <div id="arcelikWork" style="background: url('../../assets/arcelikWorkBackground.jpg') no-repeat; background-size: cover; ">
-        <img src="../../assets/arcelikLogoBackground.jpg" alt="" class="logo">
-        <h4 class="header">Arçelik B2C</h4>
-        <!--TODO TO BOTTOM-->
-        <p class="definition"></p>
-      </div>
-    </ng-template>
-    <ng-template swiperSlide>
-      <div id="pentiWork" style="background: url('../../assets/pentiWorkBackground.jpg') no-repeat">
-        <!--<img src="../../assets/pentiLogoBackground.jpg" alt="" class="logo">-->
-        <h4 class="header">Penti</h4>
-        <p class="definition"></p>
-      </div>
-    </ng-template>
-    <ng-template swiperSlide>
-      <div id="carsibasiWork" style="background: url('../../assets/underWorkBackground.jpg') no-repeat">
-        <img src="../../assets/ÇarşıbaşıLogoBackground.jpg" alt="" class="logo">
-        <h4 class="header">Çarşıbaşı B2C</h4>
-        <p class="definition"></p>
-      </div>
-    </ng-template>
-  </swiper>`,
+  template: `
+    <swiper
+      [config]="config"
+      [spaceBetween]="30"
+      [centeredSlides]="true"
+      class="mySwiper">
+      <ng-container *ngFor="let work of works">
+        <ng-template swiperSlide>
+          <div style="background: url('{{work.backroundUrl}}') no-repeat; background-size: cover; ">
+            <img src="{{work.logoUrl}}" alt="" class="logo">
+            <h4 class="header">{{work.name}}</h4>
+            <p class="definition">{{work.definition}}</p>
+          </div>
+        </ng-template>
+      </ng-container>
+    </swiper>`,
   styleUrls: ['./works-page.component.scss'],
   encapsulation: ViewEncapsulation.None,
 
 })
 export class WorksPageComponent implements OnInit {
-  @ViewChild('arcelikHeader') arcelikHeader: ElementRef | undefined
-  @ViewChild('carsiHeader') carsiHeader: ElementRef | undefined
-  @ViewChild('pentiHeader') pentiHeader: ElementRef | undefined
-  @ViewChild('arcelikContent') arcelikContent: ElementRef | undefined
-
-
   config: SwiperOptions = {
     slidesPerView: 1,
     breakpoints: {
@@ -58,26 +40,41 @@ export class WorksPageComponent implements OnInit {
         slidesPerView: 3,
       },
       1600: {
-        slidesPerView:4,
+        slidesPerView: 4,
       },
       2000: {
-        slidesPerView:5,
+        slidesPerView: 5,
       },
     }
   };
-  constructor(private modalService: NgbModal) {
 
-  }
+  public works = [
+    {
+      name: "Arçelik B2C",
+      logoUrl: "../../assets/arcelikLogoBackground.jpg",
+      backroundUrl: "../../assets/arcelikWorkBackground.jpg",
+      definition: "Definition",
+    },
+    {
+      name: "Arçelik B2C",
+      logoUrl: "",
+      backroundUrl: "../../assets/underWorkBackground.jpg",
+      definition: "Definition",
+    },
+    {
+      name: "Penti B2C",
+      logoUrl: "../../assets/pentiLogoBackground.jpg",
+      backroundUrl: "../../assets/pentiWorkBackground.jpg",
+      definition: "Definition",
+    }
+  ];
+
+  constructor(private modalService: NgbModal) {}
 
   ngOnInit(): void {
     document.getElementById("worksLink")?.classList.add("current");
   }
-
-  onSwiper(swiper: any) {
-  }
-
   openContent(content: any) {
     //TODO MOVE METHODS to here for modal move
-
   }
 }
