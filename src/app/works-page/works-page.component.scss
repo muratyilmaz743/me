@@ -32,31 +32,11 @@
 
 .swiper-slide {
   > div {
-    height: 100%;
+    height: 90vh;
     width: 100%;
   }
 }
 
-
-.swiper-slide h2, i {
-  z-index: 999;
-  display: block;
-  font-weight: bold;
-}
-
-.swiper-slide h2 {
-  color: $myGreen;
-  padding: 27px;
-  -webkit-transition: .7s;
-  -moz-transition: .7s;
-  -o-transition: .7s;
-  transition: .7s;
-}
-
-.swiper-slide h2:hover {
-  font-size: 2em;
-  cursor: context-menu;
-}
 
 .swiper-slide i {
   color: #484554;
@@ -77,39 +57,6 @@
   background-color: #5cb3fd;
 }
 
-.contents {
-  background-color: white;
-
-}
-
-.contents {
-  margin-right: 25px;
-  z-index: 999;
-  width: 50%;
-  background-color: rgba(200, 200, 200, 0.5);
-  border-radius: 20px;
-  font-size: 18px;
-  font-weight: bold;
-  display: inline;
-  position: absolute;
-  margin-top: 102vmax;
-  -webkit-transition: .7s;
-  -moz-transition: .7s;
-  -o-transition: .7s;
-  transition: .7s;
-}
-
-.grid-container {
-  display: grid;
-  padding: 10px;
-  grid-column-gap: 60px;
-  grid-row-gap: 45px;
-  height: 100%;
-  grid-template-columns: auto auto;
-  .grid-item {
-    padding: 20px;
-    text-align: center;
-  }
   .companyLogo {
     grid-row-start: 1;
     grid-row-end: 3;
@@ -123,39 +70,12 @@
       border-radius: 0 58px 0 58px;
     }
   }
-  .companyName {
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    h1 {
-      font-size: 10vw;
-      color: $myLightGreen;
-    }
+  #companyName {
+    text-align: start;
+    font-size: 110px;
   }
-  .definition {
-    p {
-      color: $myWhite;
-      text-align: left;
-    }
+  #definition {
+    color: $myWhite;
+    text-align: left;
   }
-}
-
-#exampleImages img {
-  filter: blur(4px);
-  -webkit-transition: .7s;
-  -moz-transition: .7s;
-  -o-transition: .7s;
-  transition: .7s;
-}
-
-#exampleImages {
-  z-index: 9;
-  position: absolute;
-
-  img {
-    width: 250px;
-
-  }
-}
-
 

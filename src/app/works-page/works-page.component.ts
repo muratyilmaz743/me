@@ -1,9 +1,6 @@
 import {Component, ViewEncapsulation, OnInit} from '@angular/core';
-
-declare var $: any;
 // import Swiper core and required modules
 import SwiperCore, {Pagination, Navigation, SwiperOptions} from "swiper";
-import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 // install Swiper modules
 SwiperCore.use([Pagination, Navigation]);
 
@@ -17,9 +14,9 @@ SwiperCore.use([Pagination, Navigation]);
       class="mySwiper">
       <ng-container *ngFor="let work of works">
         <ng-template swiperSlide>
-          <div style="background: url('{{work.backroundUrl}}') no-repeat; background-size: cover; ">
+          <div style="background: url('{{work.backroundUrl}}') no-repeat; background-size: cover;">
             <img src="{{work.logoUrl}}" alt="" class="logo">
-            <h4 class="header">{{work.name}}</h4>
+            <h1 class="header" id="companyName">{{work.name}}</h1>
             <p class="definition">{{work.definition}}</p>
           </div>
         </ng-template>
@@ -56,7 +53,7 @@ export class WorksPageComponent implements OnInit {
       definition: "Definition",
     },
     {
-      name: "Arçelik B2C",
+      name: "Çarşıbaşı",
       logoUrl: "",
       backroundUrl: "../../assets/underWorkBackground.jpg",
       definition: "Definition",
@@ -69,12 +66,8 @@ export class WorksPageComponent implements OnInit {
     }
   ];
 
-  constructor(private modalService: NgbModal) {}
 
   ngOnInit(): void {
     document.getElementById("worksLink")?.classList.add("current");
-  }
-  openContent(content: any) {
-    //TODO MOVE METHODS to here for modal move
   }
 }
