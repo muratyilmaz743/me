@@ -61,6 +61,27 @@ section {
 }
 
 
+@media screen and (max-width: 600px) {
+  #nameTag, #whoAmI{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    left: 0 !important;
+    right: 0;
+  }
+}
+
+
+@media screen and (max-width: 1800px) {
+  body {
+    background: $back;
+  }
+  #myPic, .bottom-left {
+    display: none;
+  }
+}
+
+
 
 
 
