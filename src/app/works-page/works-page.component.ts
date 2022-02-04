@@ -14,10 +14,12 @@ SwiperCore.use([Pagination, Navigation]);
       class="mySwiper">
       <ng-container *ngFor="let work of works">
         <ng-template swiperSlide>
-          <div style="background: url('{{work.backroundUrl}}') no-repeat; background-size: cover;">
+          <div style="background: url('{{work.backroundUrl}}') no-repeat center; background-size: cover;">
             <img src="{{work.logoUrl}}" alt="" class="logo">
-            <h1 class="header" id="companyName">{{work.name}}</h1>
-            <p class="definition">{{work.definition}}</p>
+            <div class="wrapper">
+              <span class="companyName" style="color: {{work.styleColor}}">{{work.name}}</span>
+              <p class="definition" style="color: {{work.styleColor}}">{{work.definition}}</p>
+            </div>
           </div>
         </ng-template>
       </ng-container>
@@ -48,19 +50,22 @@ export class WorksPageComponent implements OnInit {
   public works = [
     {
       name: "Arçelik B2C",
-      logoUrl: "../../assets/arcelikLogoBackground.jpg",
+      styleColor: "#cf9eac",
+      logoUrl: "../../assets/arcelikLogoBackground.png",
       backroundUrl: "../../assets/arcelikWorkBackground.jpg",
       definition: "Definition",
     },
     {
       name: "Çarşıbaşı",
-      logoUrl: "",
+      styleColor: "#474554",
+      logoUrl: "../../assets/carsibasiLogoBackground.png",
       backroundUrl: "../../assets/underWorkBackground.jpg",
       definition: "Definition",
     },
     {
       name: "Penti B2C",
-      logoUrl: "../../assets/pentiLogoBackground.jpg",
+      styleColor: "#475675",
+      logoUrl: "../../assets/pentiLogoBackground.png",
       backroundUrl: "../../assets/pentiWorkBackground.jpg",
       definition: "Definition",
     }

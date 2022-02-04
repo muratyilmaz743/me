@@ -2,6 +2,8 @@
 @import "node_modules/swiper/modules/pagination/pagination";
 @import "node_modules/swiper/modules/navigation/navigation";
 @import "src/styles";
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@300&display=swap');
 
 .swiper {
   width: 100%;
@@ -12,7 +14,7 @@
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: $myGray;
+  background: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -28,6 +30,29 @@
   height: 90%;
   margin-bottom: auto;
   margin-top: 50px;
+  .logo{
+    height: 50px;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+  }
+
+  .wrapper {
+    position: absolute;
+    bottom: 45px;
+    left: 20px;
+
+    .companyName {
+      bottom: 0;
+      font-size: 80px;
+      font-family: 'Spectral', serif;
+    }
+
+    .definition {
+      text-align: left;
+      font-family: 'Sora', sans-serif;
+    }
+  }
 }
 
 .swiper-slide {
@@ -55,30 +80,5 @@
 
 .light-blue-backdrop {
   background-color: #5cb3fd;
-}
-
-.companyLogo {
-  grid-row-start: 1;
-  grid-row-end: 3;
-  height: 40vw;
-  width: 40vw;
-  display: block;
-
-  img {
-    min-width: 100%;
-    min-height: 100%;
-    border: 5px solid $myWhite;
-    border-radius: 0 58px 0 58px;
-  }
-}
-
-#companyName {
-  text-align: start;
-  font-size: 110px;
-}
-
-#definition {
-  color: $myWhite;
-  text-align: left;
 }
 
