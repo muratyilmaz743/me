@@ -57,25 +57,28 @@
   background-color: #5cb3fd;
 }
 
-  .companyLogo {
-    grid-row-start: 1;
-    grid-row-end: 3;
-    height: 40vw;
-    width: 40vw;
-    display: block;
-    img {
-      min-width: 100%;
-      min-height: 100%;
-      border: 5px solid $myWhite;
-      border-radius: 0 58px 0 58px;
-    }
+.companyLogo {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  height: 40vw;
+  width: 40vw;
+  display: block;
+
+  img {
+    min-width: 100%;
+    min-height: 100%;
+    border: 5px solid $myWhite;
+    border-radius: 0 58px 0 58px;
   }
-  #companyName {
-    text-align: start;
-    font-size: 110px;
-  }
-  #definition {
-    color: $myWhite;
-    text-align: left;
-  }
+}
+
+#companyName {
+  text-align: start;
+  font-size: 110px;
+}
+
+#definition {
+  color: $myWhite;
+  text-align: left;
+}
 
