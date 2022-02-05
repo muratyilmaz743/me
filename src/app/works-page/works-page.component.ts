@@ -14,7 +14,7 @@ SwiperCore.use([Pagination, Navigation]);
       class="mySwiper">
       <ng-container *ngFor="let work of works">
         <ng-template swiperSlide>
-          <div style="background: url('{{work.backroundUrl}}') no-repeat center; background-size: cover;">
+          <div style="background: url('{{work.backGroundUrl}}') no-repeat center; background-size: cover;">
             <img src="{{work.logoUrl}}" alt="" class="logo">
             <div class="wrapper">
               <span class="companyName" style="color: {{work.styleColor}}">{{work.name}}</span>
@@ -52,21 +52,21 @@ export class WorksPageComponent implements OnInit {
       name: "Arçelik B2C",
       styleColor: "#cf9eac",
       logoUrl: "../../assets/arcelikLogoBackground.png",
-      backroundUrl: "../../assets/arcelikWorkBackground.jpg",
+      backGroundUrl: "../../assets/arcelikWorkBackground.jpg",
       definition: "Definition",
     },
     {
       name: "Çarşıbaşı",
       styleColor: "#474554",
       logoUrl: "../../assets/carsibasiLogoBackground.png",
-      backroundUrl: "../../assets/underWorkBackground.jpg",
+      backGroundUrl: "../../assets/underWorkBackground.jpg",
       definition: "Definition",
     },
     {
       name: "Penti B2C",
       styleColor: "#475675",
       logoUrl: "../../assets/pentiLogoBackground.png",
-      backroundUrl: "../../assets/pentiWorkBackground.jpg",
+      backGroundUrl: "../../assets/pentiWorkBackground.jpg",
       definition: "Definition",
     }
   ];
