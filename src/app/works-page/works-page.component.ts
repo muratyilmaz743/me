@@ -1,7 +1,7 @@
 import {Component, ViewEncapsulation, OnInit} from '@angular/core';
-// import Swiper core and required modules
 import SwiperCore, {Pagination, Navigation, SwiperOptions} from "swiper";
-// install Swiper modules
+import {WorksService} from "../works.service";
+import {Work} from "../work";
 SwiperCore.use([Pagination, Navigation]);
 
 @Component({
@@ -29,6 +29,10 @@ SwiperCore.use([Pagination, Navigation]);
 
 })
 export class WorksPageComponent implements OnInit {
+  works: Work[]= [];
+
+  constructor(private worksService: WorksService) { }
+
   config: SwiperOptions = {
     slidesPerView: 1,
     breakpoints: {
@@ -47,32 +51,13 @@ export class WorksPageComponent implements OnInit {
     }
   };
 
-  public works = [
-    {
-      name: "Arçelik B2C",
-      styleColor: "#cf9eac",
-      logoUrl: "../../assets/arcelikLogoBackground.png",
-      backGroundUrl: "../../assets/arcelikWorkBackground.jpg",
-      definition: "Definition",
-    },
-    {
-      name: "Çarşıbaşı",
-      styleColor: "#474554",
-      logoUrl: "../../assets/carsibasiLogoBackground.png",
-      backGroundUrl: "../../assets/underWorkBackground.jpg",
-      definition: "Definition",
-    },
-    {
-      name: "Penti B2C",
-      styleColor: "#475675",
-      logoUrl: "../../assets/pentiLogoBackground.png",
-      backGroundUrl: "../../assets/pentiWorkBackground.jpg",
-      definition: "Definition",
-    }
-  ];
-
-
   ngOnInit(): void {
+    this.getHeroes();
     document.getElementById("worksLink")?.classList.add("current");
+  }
+
+  getHeroes(): void{
+    this.worksService.getWorks()
+      .subscribe(works => this.works = works)
   }
 }
