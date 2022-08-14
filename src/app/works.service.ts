@@ -6,7 +6,6 @@ import {WORKS} from "./mock-works";
   providedIn: 'root'
 })
 export class WorksService {
-
   getWorks() {
     return of(WORKS);
   }

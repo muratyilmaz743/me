@@ -1,11 +1,11 @@
-import {Component, ViewEncapsulation, OnInit} from '@angular/core';
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import SwiperCore, {Pagination, Navigation, SwiperOptions} from "swiper";
 import {WorksService} from "../works.service";
 import {Work} from "../work";
 SwiperCore.use([Pagination, Navigation]);
 
 @Component({
-  selector: 'app-works-page',
+  selector: 'app-works',
   template: `
     <swiper
       [config]="config"
@@ -24,11 +24,11 @@ SwiperCore.use([Pagination, Navigation]);
         </ng-template>
       </ng-container>
     </swiper>`,
-  styleUrls: ['./works-page.component.scss'],
+  styleUrls: ['./works.component.scss'],
   encapsulation: ViewEncapsulation.None,
-
 })
-export class WorksPageComponent implements OnInit {
+export class WorksComponent implements OnInit {
+
   works: Work[]= [];
 
   constructor(private worksService: WorksService) { }
@@ -60,4 +60,5 @@ export class WorksPageComponent implements OnInit {
     this.worksService.getWorks()
       .subscribe(works => this.works = works)
   }
+
 }
