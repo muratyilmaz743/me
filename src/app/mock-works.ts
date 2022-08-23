@@ -7,6 +7,7 @@ export const WORKS: Work[] = [
     logoUrl: "../../assets/arcelikLogoBackground.png",
     backGroundUrl: "../../assets/arcelikWorkBackground.jpg",
     definition: "Definition",
+    baseURL: "https://www.arcelik.com.tr/"
   },
   {
     name: "Çarşıbaşı",
@@ -14,6 +15,7 @@ export const WORKS: Work[] = [
     logoUrl: "../../assets/carsibasiLogoBackground.png",
     backGroundUrl: "../../assets/underWorkBackground.jpg",
     definition: "Definition",
+    baseURL : "https://www.carsibasi.com/TR/"
   },
   {
     name: "Penti B2C",
@@ -21,5 +23,6 @@ export const WORKS: Work[] = [
     logoUrl: "../../assets/pentiLogoBackground.png",
     backGroundUrl: "../../assets/pentiWorkBackground.jpg",
     definition: "Definition",
+    baseURL: "https://www.penti.com/tr/"
   }
 ]

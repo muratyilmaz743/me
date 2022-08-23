@@ -7,6 +7,7 @@ SwiperCore.use([Pagination, Navigation]);
 @Component({
   selector: 'app-works',
   template: `
+  <div class="works">
     <swiper
       [config]="config"
       [spaceBetween]="30"
@@ -17,13 +18,14 @@ SwiperCore.use([Pagination, Navigation]);
           <div style="background: url('{{work.backGroundUrl}}') no-repeat center; background-size: cover;">
             <img src="{{work.logoUrl}}" alt="" class="logo">
             <div class="wrapper">
-              <span class="companyName" style="color: {{work.styleColor}}">{{work.name}}</span>
+              <a href="{{ work.baseURL }}" target="_blank"><span class="companyName" style="color: {{work.styleColor}}">{{work.name}}</span></a>
               <p class="definition" style="color: {{work.styleColor}}">{{work.definition}}</p>
             </div>
           </div>
         </ng-template>
       </ng-container>
-    </swiper>`,
+    </swiper>
+    </div>`,
   styleUrls: ['./works.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })

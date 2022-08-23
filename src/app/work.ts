@@ -4,4 +4,5 @@ export interface Work {
   logoUrl: string;
   backGroundUrl: string;
   definition: string;
+  baseURL: string;
 }
