@@ -53,6 +53,7 @@
     "brotli-webpack-plugin": "^1.1.0",
     "enhanced-resolve": "^3.3.0",
     "gulp": "^4.0.2",
+    "gulp-gzip": "^1.4.2",
     "jasmine-core": "^4.3.0",
     "karma": "^6.4.0",
     "karma-chrome-launcher": "~3.1.0",
