@@ -12,7 +12,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "heroku-postbuild": "ng build",
-    "postbuild": "for i in $(find dist/ng-portfolio/ -type f -print); do brotli $i; done"
+    "build.prod": "ng build --environment=prod && tar -zcvf archive.tar.gz dist/prod/*"
   },
   "private": true,
   "dependencies": {
