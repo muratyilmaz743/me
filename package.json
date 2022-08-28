@@ -11,7 +11,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "heroku-postbuild": "ng build"
+    "heroku-postbuild": "ng build",
+    "postbuild": "for i in $(find dist/ng-portfolio/ -type f -print); do brotli $i; done"
   },
   "private": true,
   "dependencies": {
