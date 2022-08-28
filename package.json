@@ -12,6 +12,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "heroku-postbuild": "ng build",
+    "postbuild": "gulp compress",
     "build.prod": "ng build --environment=prod && tar -zcvf archive.tar.gz dist/prod/*"
   },
   "private": true,
@@ -50,6 +51,8 @@
     "@types/jquery": "^3.5.10",
     "@types/node": "^18.7.13",
     "enhanced-resolve": "^3.3.0",
+    "gulp": "^4.0.2",
+    "gulp-gzip": "^1.4.2",
     "jasmine-core": "^4.3.0",
     "karma": "^6.4.0",
     "karma-chrome-launcher": "~3.1.0",
