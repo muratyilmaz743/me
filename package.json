@@ -12,7 +12,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "heroku-postbuild": "npm run build",
-    "prebuild": "gulp compress"
+    "postbuild": "gulp compress"
   },
   "private": true,
   "dependencies": {
