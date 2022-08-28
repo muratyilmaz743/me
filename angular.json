@@ -109,5 +109,8 @@
       }
     }
   },
-  "defaultProject": "ng-portfolio"
+  "defaultProject": "ng-portfolio",
+  "cli": {
+    "analytics": false
+  }
 }
