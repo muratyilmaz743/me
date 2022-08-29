@@ -73,6 +73,16 @@
 @media screen and (max-width: 600px) {
   .swiper{
     padding-top: 5vh;
+    .swiper-slide {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .definition {
+      padding-left: 20px;
+    }
+    .swiper-wrapper{
+      display:inline-flex;
+  }
   }
 }
 

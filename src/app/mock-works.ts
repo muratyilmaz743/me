@@ -2,7 +2,7 @@ import {Work} from "./work";
 
 export const WORKS: Work[] = [
   {
-    name: "Arçelik B2C",
+    name: "Arçelik",
     styleColor: "#cf9eac",
     logoUrl: "../../assets/arcelikLogoBackground.webp",
     backGroundUrl: "../../assets/arcelikWorkBackground.webp",
@@ -18,7 +18,7 @@ export const WORKS: Work[] = [
     baseURL : "https://www.carsibasi.com/TR/"
   },
   {
-    name: "Penti B2C",
+    name: "Penti",
     styleColor: "#475675",
     logoUrl: "../../assets/pentiLogoBackground.webp",
     backGroundUrl: "../../assets/pentiWorkBackground.webp",

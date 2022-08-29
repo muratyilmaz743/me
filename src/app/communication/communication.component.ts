@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./communication.component.scss']
 })
 export class CommunicationComponent implements OnInit {
+  
 
   constructor() { }
 
