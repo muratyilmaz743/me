@@ -5,7 +5,6 @@ import {Work} from "../work";
 @Component({
   selector: 'app-works',
   template: `
-    <div id="frame"></div>
       <ng-container *ngFor="let work of works">
           <div class="work" id="{{work.name}}-work">  
             <a class="companyName" href="{{ work.baseURL }}" target="_blank"><span class="companyName" style="color: {{ work.styleColor }}">{{ work.name }}</span></a>
@@ -14,7 +13,8 @@ import {Work} from "../work";
               <img src="{{work.backGroundUrl}}" alt="">
             </div>
           </div>
-      </ng-container>`,
+      </ng-container>
+      <div id="frame"></div>`,
   styleUrls: ['./works.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
@@ -51,7 +51,7 @@ export class WorksComponent implements OnInit {
 
         setTimeout(function() {
           animationIsDone = true;
-      }, 2000);
+      }, 1100);
       }
     });
   }
@@ -63,13 +63,7 @@ export class WorksComponent implements OnInit {
 }
 
 function scroll(index: number, listOfElements: HTMLCollection){
-  listOfElements[index].scrollIntoView();
-}
-
-function isInFrame(myElement: Element){
-  var boundingOfElement = myElement.getBoundingClientRect();  
-
-  return (boundingOfElement.top == 0);
+  listOfElements[index].scrollIntoView({behavior: "smooth"});
 }
 
 function preventScroll(event: Event) {
