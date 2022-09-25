@@ -7,6 +7,33 @@
 body{
   overflow: hidden;
 }
+@mixin sm {
+  @media (max-width: #{$screen-sm-min}) {
+      @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (max-width: #{$screen-md-min}) {
+      @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (max-width: #{$screen-lg-min}) {
+      @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media (max-width: #{$screen-xl-min}) {
+      @content;
+  }
+}
+
 
 .work{
   z-index: 3;
@@ -29,6 +56,12 @@ body{
     &:hover{
       filter: brightness(85%);
     }
+    @include sm {
+      font-size: 70px;
+      top: 20%;
+      width: 68vw;
+      left: 1vw;
+    }
   }
   .description{
     position: absolute;
@@ -42,6 +75,11 @@ body{
     font-size: 18px;
     line-height: 21px;
     color: #000000;
+    @include sm {
+      left: 1vw;
+      top: 70%;
+      width: max-content;
+    }
   }
   .wrapper{
     position: relative;
@@ -59,6 +97,11 @@ body{
         -moz-filter: blur(5px);
         -o-filter: blur(5px);
         -ms-filter: blur(5px);
+    }
+
+    @include sm {
+      width: 78vw;
+      left: 0%;
     }
   }
 }
