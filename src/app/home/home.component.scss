@@ -30,7 +30,7 @@ section {
     left: 17vw;
 
     #myName {
-      font-size: 12vw;
+      font-size: 5vw;
       letter-spacing: 3px;
       font-family: "BioRhyme", serif;
       font-weight: bolder;
@@ -99,5 +99,8 @@ section {
     padding: 0;
     left: 0 !important;
     right: 0;
+  }
+  #myName {
+    font-size: 12vw !important;
   }
 }
