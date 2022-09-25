@@ -1,6 +1,6 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
-import {WorksService} from "../works.service";
-import {Work} from "../work";
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { WorksService } from "../works.service";
+import { Work } from "../work";
 
 @Component({
   selector: 'app-works',
@@ -20,50 +20,63 @@ import {Work} from "../work";
 })
 export class WorksComponent implements OnInit {
 
-  works: Work[]= [];
+  works: Work[] = [];
   currentPosition: number = 0;
+  animationIsDone = true;
 
   constructor(private worksService: WorksService) { }
 
   ngOnInit(): void {
-    var animationIsDone = true;
-    var works = document.getElementsByClassName("work");
-    var position = this.currentPosition;
-    this.getHeroes();
     document.getElementById("worksLink")?.classList.add("current");
-  
-    window.addEventListener('wheel', function(e){
-      if(animationIsDone){    
+    var ts: number;
+    var works = document.getElementsByClassName("work");
 
-        var scrollDir = e.deltaY < 0  ? "up" : "down";
+    this.getHeroes();
 
-        if(scrollDir === "up" && position !== 0){
-          animationIsDone = false;
-          preventScroll(e);
-          position--;
-          scroll(position,works);        
-        }else if(scrollDir === "down" && position !== works.length-1){   
-          animationIsDone = false;
-          preventScroll(e);     
-          position++;
-          scroll(position,works);
-        }
+    window.addEventListener('touchstart', function (e) {
+      ts = e.touches[0].clientY;
+    });
 
-        setTimeout(function() {
-          animationIsDone = true;
-      }, 1100);
+    window.addEventListener('touchmove', function (e) {
+      var te = e.changedTouches[0].clientY;
+      if (ts > te) {
+        window.dispatchEvent(wheelEventUp)
+      } else {
+        window.dispatchEvent(wheelEventDown)
       }
     });
-  }
 
-  getHeroes(): void{
+    window.addEventListener('wheel', (e) => this.mainScroll(works,e));
+}
+
+  getHeroes(): void {
     this.worksService.getWorks()
       .subscribe(works => this.works = works)
   }
+  mainScroll = (works: HTMLCollection, e: WheelEvent) => {
+    if (this.animationIsDone) {
+      var scrollDir = e.deltaY < 0 ? "up" : "down";
+      if (scrollDir === "up" && this.currentPosition !== 0) {
+        this.animationIsDone = false;
+        preventScroll(e);
+        this.currentPosition--;
+        scroll(this.currentPosition, works);
+      } else if (scrollDir === "down" && this.currentPosition !== works.length - 1) {
+        this.animationIsDone = false;
+        preventScroll(e);
+        this.currentPosition++;
+        scroll(this.currentPosition, works);
+      }
+  
+      setTimeout(() => {
+        this.animationIsDone = true;
+      }, 1100);
+    }
+  }
 }
 
-function scroll(index: number, listOfElements: HTMLCollection){
-  listOfElements[index].scrollIntoView({behavior: "smooth"});
+function scroll(index: number, listOfElements: HTMLCollection) {
+  listOfElements[index].scrollIntoView({ behavior: "smooth" });
 }
 
 function preventScroll(event: Event) {
@@ -72,3 +85,12 @@ function preventScroll(event: Event) {
   event.stopPropagation();
 }
 
+let wheelEventUp = new WheelEvent('wheel', {
+  deltaY: 1,
+  deltaMode: 1
+});
+
+let wheelEventDown = new WheelEvent('wheel', {
+  deltaY: -1,
+  deltaMode: 1
+});
