@@ -67,7 +67,7 @@ body{
     position: absolute;
     width: 268px;
     left: 65%;
-    top: 40%;
+    top: 43%;
     z-index: 9999 ;
     font-family: 'Roboto';
     font-style: normal;
@@ -76,9 +76,8 @@ body{
     line-height: 21px;
     color: #000000;
     @include sm {
-      left: 1vw;
-      top: 70%;
-      width: max-content;
+      left: 3vw;
+      top: 65%;
     }
   }
   .wrapper{
