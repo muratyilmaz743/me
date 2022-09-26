@@ -37,17 +37,17 @@ export class WorksComponent implements OnInit {
       ts = e.touches[0].clientY;
     });
 
-    window.addEventListener('touchmove', function (e) {
-      var te = e.changedTouches[0].clientY;
-      if (ts > te) {
-        window.dispatchEvent(wheelEventUp)
-      } else {
+    window.addEventListener('touchend', function (e) {
+      var currentY = e.changedTouches[0].clientY;
+      if (currentY > ts) {
         window.dispatchEvent(wheelEventDown)
+      } else if (currentY < ts) {
+        window.dispatchEvent(wheelEventUp)
       }
+      ts = currentY;
     });
-
-    window.addEventListener('wheel', (e) => this.mainScroll(works,e));
-}
+      window.addEventListener('wheel', (e) => this.mainScroll(works, e));
+  }
 
   getHeroes(): void {
     this.worksService.getWorks()
@@ -58,39 +58,32 @@ export class WorksComponent implements OnInit {
       var scrollDir = e.deltaY < 0 ? "up" : "down";
       if (scrollDir === "up" && this.currentPosition !== 0) {
         this.animationIsDone = false;
-        preventScroll(e);
+        e.stopPropagation();
         this.currentPosition--;
-        scroll(this.currentPosition, works);
+        setTimeout(() => {scroll(this.currentPosition,works)},30)
       } else if (scrollDir === "down" && this.currentPosition !== works.length - 1) {
         this.animationIsDone = false;
-        preventScroll(e);
+        e.stopPropagation();
         this.currentPosition++;
-        scroll(this.currentPosition, works);
+        setTimeout(() => {scroll(this.currentPosition,works)},30) 
+        //Not best practice, but couldn't resolve with promise, probably target is not coming.
       }
-  
-      setTimeout(() => {
+
+      setTimeout(() => { // Without this timeout, scrolls will be quite rush.  
         this.animationIsDone = true;
-      }, 1100);
+      }, 1500);
     }
   }
 }
 
-function scroll(index: number, listOfElements: HTMLCollection) {
+let scroll = ((index: number, listOfElements: HTMLCollection) => {
   listOfElements[index].scrollIntoView({ behavior: "smooth" });
-}
-
-function preventScroll(event: Event) {
-
-  event.preventDefault();
-  event.stopPropagation();
-}
+})
 
 let wheelEventUp = new WheelEvent('wheel', {
-  deltaY: 1,
-  deltaMode: 1
+  deltaY: 1
 });
 
 let wheelEventDown = new WheelEvent('wheel', {
-  deltaY: -1,
-  deltaMode: 1
+  deltaY: -1
 });

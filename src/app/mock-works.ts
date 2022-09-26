@@ -3,7 +3,7 @@ import { Work } from "./work";
 export const WORKS: Work[] = [
   {
     name: "Penti",
-    styleColor: "#000000",
+    styleColor: "#D3CEDF",
     logoUrl: "../../assets/penti.webp",
     backGroundUrl: "../../assets/penti.webp",
     definition: "A big B2C project that I was involved in from start to finish. I had the opportunity to work in various fields such as Javascript, JQuery and Impex.",
@@ -11,7 +11,7 @@ export const WORKS: Work[] = [
   },
   {
     name: "Arçelik",
-    styleColor: "#ffffff",
+    styleColor: "#F96666",
     logoUrl: "../../assets/arcelikLogoBackground.webp",
     backGroundUrl: "../../assets/arcelik.webp",
     definition: "An international B2C project where I worked with a very large international team, performing performance improvements, SEO work and Hybris update.",
@@ -42,7 +42,7 @@ export const WORKS: Work[] = [
   },
   {
     name: "Çarşıbaşı",
-    styleColor: "#3e4a3d",
+    styleColor: "#D8D8D8",
     logoUrl: "../../assets/carsibasiLogoBackground.webp",
     backGroundUrl: "../../assets/carsibasi.webp",
     definition: "First big Hybris project of mine. Javascript, JQuery, Spring used. ",

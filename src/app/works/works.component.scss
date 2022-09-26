@@ -4,6 +4,8 @@
 @import "src/styles";
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Spectral:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 body{
   overflow: hidden;
 }
@@ -48,9 +50,9 @@ body{
     position: absolute;
     top: 40%;
     z-index: 9999;
-    font-family: 'Roboto';
+    font-family: 'Lato', sans-serif;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 400;
     font-size: 128px;
     line-height: 150px;
     &:hover{
@@ -66,15 +68,14 @@ body{
   .description{
     position: absolute;
     width: 268px;
-    left: 65%;
-    top: 43%;
+    left: 68%;
+    top: 65%;
     z-index: 9999 ;
     font-family: 'Roboto';
     font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
+    font-weight: 300;
+    font-size: 20px;
     line-height: 21px;
-    color: #000000;
     @include sm {
       left: 3vw;
       top: 65%;
@@ -91,11 +92,7 @@ body{
       width:100%;
       height:100%;
       object-fit:cover;
-      filter: blur(5px);
-        -webkit-filter: blur(5px);
-        -moz-filter: blur(5px);
-        -o-filter: blur(5px);
-        -ms-filter: blur(5px);
+      filter: brightness(35%);
     }
 
     @include sm {

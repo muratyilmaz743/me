@@ -1,6 +1,5 @@
 @import "src/styles";
-@import url("https://fonts.googleapis.com/css2?family=BioRhyme:wght@200&family=Spectral:wght@300&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Molengo&display=swap');
 $color_1: #999;
 $color_2: rgba(0, 0, 0, 0.5);
 
@@ -32,7 +31,7 @@ section {
     #myName {
       font-size: 5vw;
       letter-spacing: 3px;
-      font-family: "BioRhyme", serif;
+      font-family: 'Dancing Script', cursive;
       font-weight: bolder;
     }
 
@@ -69,7 +68,7 @@ section {
     }
 
     .bottom-left {
-      font-family: "BioRhyme", serif;
+      font-family: 'Molengo', sans-serif;
       position: absolute;
       bottom: 12px;
       left: 32px;
