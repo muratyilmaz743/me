@@ -20,20 +20,10 @@
   content: '';
 }
 
-.nav {
-  z-index: 9999;
-  margin-top: 0.5vh;
-}
 
 .nav-link {
-  color: $myLightGreen;
   font-size: medium;
   font-weight: bold;
-  margin: auto 1.5vh;
-}
-
-.nav-link:hover {
-  color: $myGreen;
 }
 
 .link--elara::before {

@@ -14,11 +14,12 @@ body{
   align-items: center;
 }
 
-h1 {
+#knowMore p {
   position: absolute;
   top: 25%;
   text-align: center;
   color: $myGreen;
+  font-family: 'Molengo', sans-serif;
 }
 
 #icons, #hover {

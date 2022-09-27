@@ -12,6 +12,12 @@ export class AppComponent implements AfterViewInit {
   title = 'ng-portfolio';
 
   ngAfterViewInit(): void {
+    $('#mobileNavbar').click(() => {
+      const mobileMenu = $('#navbar-sticky');
+      if(mobileMenu.hasClass('hidden')){
+        mobileMenu.removeClass('hidden')
+      }else mobileMenu.addClass('hidden');
+    });
 
   }
 }

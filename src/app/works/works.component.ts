@@ -44,7 +44,6 @@ export class WorksComponent implements OnInit {
       } else if (currentY < ts) {
         window.dispatchEvent(wheelEventUp)
       }
-      ts = currentY;
     });
       window.addEventListener('wheel', (e) => this.mainScroll(works, e));
   }

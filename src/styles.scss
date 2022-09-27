@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 $myLightGreen: #3aafa9;
 $myGreen: #2b7a78;
 $myWhite: #def2f1;
@@ -17,8 +21,6 @@ $screen-lg-min: 991.98px;
 // Large tablets and desktops
 $screen-xl-min: 1199.98px;
 
-/* Importing Bootstrap SCSS file. */
-@import "~bootstrap/scss/bootstrap";
 
 p {
   font-family: "Lucida Console", "Courier New", monospace;
@@ -26,4 +28,8 @@ p {
 
 body {
   background: $back;
+}
+
+a.current{
+  color: $myGray;
 }
