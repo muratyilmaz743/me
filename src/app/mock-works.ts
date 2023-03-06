@@ -41,6 +41,14 @@ export const WORKS: Work[] = [
     baseURL: "https://gonulluol.org//"
   },
   {
+    name: "LTB",
+    styleColor: "#f6f1eb",
+    logoUrl: "../../assets/carsibasiLogoBackground.webp",
+    backGroundUrl: "../../assets/ltb.webp",
+    definition: "I supported my brothers in arms in this very stressful and intense project.",
+    baseURL: "https://www.ltbjeans.com/tr-TR"
+  },
+  {
     name: "Çarşıbaşı",
     styleColor: "#D8D8D8",
     logoUrl: "../../assets/carsibasiLogoBackground.webp",
